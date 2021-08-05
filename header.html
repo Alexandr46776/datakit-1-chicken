@@ -1,0 +1,227 @@
+<header>
+    <!-- код окна которое выскакивает при нажатии оформить -->
+    <input type="checkbox" name="dialog_state" id="dialog_state" class="dialog_state">
+    <div id='dialog'>
+        <label id="dlg-back" for="dialog_state"></label>
+        <div id='dlg-wrap'>
+            <h2 id='dlg-header'>Хотите зайти в аккаунт ?</h2>
+            <div id='dlg-content'>Чтобы продолжить оформление заказа необходимо выполнить вход или
+                регестрацию.</div>
+            <div id='dlg-prompt'>
+                <div class='button positive'><i class="icon ion-ios-checkmark-empty"></i> Продолжить
+                </div>
+                <label id="dlg-close" for="dialog_state">
+                    <div class='button'><i class="icon ion-ios-close-empty"></i> Отмена</div>
+                </label>
+            </div>
+        </div>
+    </div>
+    <div style="max-height: 1800px; margin: auto;">
+        <div class="uk-visible@m">
+
+            <!--окно в корзине -->
+            <div id="head"
+                uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; ">
+                <nav id="global-container" class="uk-navbar-container uk-margin uk-navbar"
+                    uk-navbar="">
+                    <nav class="uk-navbar uk-margin-top" uk-navbar>
+                        <img style="width:200px; height:39px;" height="auto" src="icon/logo.png"
+                            alt="Logo" uk-img>
+                    </nav>
+                    <div class="test-overlay uk-navbar-left  " aria-hidden="false">
+
+                        <ul style="padding-bottom: 35px;"
+                            class="uk-navbar-nav uk-margin-medium-left">
+                            <!--меню в кружке -->
+                            <div style=" position: absolute; z-index:99999999; " class="container ">
+
+                                <div class="uk-margin-bottom menu"
+                                    onclick="this.classList.add('expand')">
+                                    <div class="from">
+                                        <div class="from-contents">
+                                            <div class="avatar me"></div>
+                                            <div class="name"></div>
+                                        </div>
+                                    </div>
+                                    <div class="to">
+                                        <div class="to-contents">
+                                            <div class="top">
+                                                <div class="avatar-large me"></div>
+                                                <div class="name-large"></div>
+                                                <div class="x-touch"
+                                                    onclick="document.querySelector('.menu').classList.remove('expand');event.stopPropagation();">
+                                                    <div class="x">
+                                                        <div class="line1"></div>
+                                                        <div class="line2"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="bottomone  uk-button uk-width-1-1 uk-margin-remove-top uk-align-center">
+                                                <p class=""><a href="#">Меню</a></p>
+                                            </div>
+                                            <div
+                                                class="bottomone  uk-button uk-width-1-1 uk-margin-remove-top uk-align-center">
+                                                <p class=""><a href="#">Акции</a></p>
+                                            </div>
+                                            <div
+                                                class="bottomone  uk-button uk-width-1-1 uk-margin-remove-top uk-align-center">
+                                                <p class=""><a href="#">Рестораны</a></p>
+                                            </div>
+                                            <div
+                                                class="bottomone  uk-button uk-width-1-1 uk-margin-remove-top uk-align-center">
+                                                <p class=""><a href="#">Контакты</a></p>
+                                            </div>
+                                            <div
+                                                class="bottomone  uk-button uk-width-1-1 uk-margin-remove-top uk-align-center">
+                                                <p class=""><a href="#">О нас</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </ul>
+
+                        <!-- Это кнопка переключения модального окна в # ссылка на модалку-->
+                        <button style=" font-weight: bold;" id="buttonone"
+                            class="uk-button uk-button-default uk-margin-small-right uk-margin-large-left uk-margin-xlarge-left"
+                            type="button" uk-toggle="target: #modal-example">Найдите свой
+                            адрес</button>
+                        <!-- карта -->
+                        <div id="modal-example" uk-modal>
+                            <div id="modalone" class="uk-modal-dialog uk-modal-body">
+                                <h2 class="uk-modal-title">Найдите где вы живете</h2>
+                                <button style="border-radius: 20px;" id="buttontwo"
+                                    class="uk-button uk-button-default " type="button">Определить
+                                    адрес</button>
+                                <form class="uk-search uk-search-default uk-margin-remove-left">
+                                    <input style="border-radius: 20px;" class="uk-search-input "
+                                        type="search" placeholder="введите адрес здесь">
+                                </form>
+                                <button uk-toggle="target: #modal-example" class="uk-alert-close"
+                                    type="button" uk-close></button>
+                                <iframe class="uk-margin-small-top"
+                                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12450.171988563416!2d-9.152682898287857!3d38.728300103894945!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1933714bb401f5%3A0xa9b00861ee1aa2c2!2z0J_QsNGA0Log0K3QtNGD0LDRgNC00LAgVklJ!5e0!3m2!1sru!2sde!4v1561736427906!5m2!1sru!2sde"
+                                    width="100%" height="480"></iframe>
+                                <p class="uk-text-right"></p>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="test-overlay uk-navbar-right  " aria-hidden="false">
+
+                        <ul class="uk-navbar-nav">
+                            <!-- корзина начало -->
+                            <div class="uk-inline">
+                                <li>
+                                    <a class="uk-icon-buttoncart" href="" width="30" height="30"
+                                        uk-icon="icon: cart"></a>
+                                </li>
+                                <div id="modaltwo" uk-drop="mode: click">
+                                    <div id="cartitem" class="uk-card uk-card-default ">
+                                        <div class="uk-card-header">
+                                            <div class="uk-grid-small uk-flex-middle" uk-grid>
+                                                <div class="uk-width-auto">
+                                                    <!-- <img class="uk-border-circle" width="40" height="40" src="images/avatar.jpg"> -->
+                                                </div>
+                                                <div class="uk-width-expand">
+                                                    <button uk-toggle="target: #modaltwo"
+                                                        class="uk-alert-close" type="button"
+                                                        uk-close></button>
+                                                    <h3
+                                                        class="uk-card-title uk-margin-remove-bottom">
+                                                        Оформление заказа</h3>
+                                                    <p class="uk-text-meta uk-margin-remove-top">
+                                                        <time datetime="2018-04-01T19:00">Заказ №
+                                                            3456 67</time></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="uk-card-body">
+                                            <p class="text">Товаров в заказе: 2</p>
+                                            <p>Общая сумма заказа: 274р</p>
+                                            <p>Состав заказа:</p>
+                                        </div>
+                                        <div style="overflow-y: scroll; max-height: 120px; ">
+                                            <div class="uk-card-header">
+                                                <div class="uk-grid-small uk-flex-middle" uk-grid>
+                                                    <div class="uk-width-auto">
+                                                        <img class="" width="60" height="60"
+                                                            src="icon/burger.png">
+                                                    </div>
+                                                    <div class="uk-width-expand">
+                                                        <h3
+                                                            class="uk-card-title uk-margin-remove-bottom">
+                                                            Название</h3>
+                                                        <p
+                                                            class="uk-text-meta uk-margin-remove-top">
+                                                            <time
+                                                                datetime="2018-04-01T19:00">Состав</time>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="uk-card-header">
+                                                <div class="uk-grid-small uk-flex-middle" uk-grid>
+                                                    <div class="uk-width-auto">
+                                                        <img class="" width="60" height="60"
+                                                            src="icon/burger.png">
+                                                    </div>
+                                                    <div class="uk-width-expand">
+                                                        <h3
+                                                            class="uk-card-title uk-margin-remove-bottom">
+                                                            Название</h3>
+                                                        <p
+                                                            class="uk-text-meta uk-margin-remove-top">
+                                                            <time
+                                                                datetime="2018-04-01T19:00">Состав</time>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="uk-card-footer">
+                                            <main id='main' class='main_area'>
+                                                <label class="button" for="dialog_state"><i class="icon ion-ios-upload-outline
+                                          "></i>Оформление</label>
+                                            </main>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </ul>
+                        <!-- корзина конец -->
+                        <a class="uk-navbar-toggle uk-search-icon uk-icon" uk-search-icon=""
+                            uk-toggle="target: .test-overlay; animation: uk-animation-fade"
+                            href="#"><svg style="width:30px; height:30px;" viewBox="0 0 20 20"
+                                xmlns="http://www.w3.org/2000/svg" data-svg="search-icon">
+                                <circle fill="none" stroke="#000" stroke-width="1.1" cx="9" cy="9"
+                                    r="7"></circle>
+                                <path fill="none" stroke="#000" stroke-width="1.1"
+                                    d="M14,14 L18,18 L14,14 Z"></path>
+                            </svg></a>
+                    </div>
+                    <div class="uk-navbar-left uk-flex-1 test-overlay   " aria-hidden="true"
+                        style="" wfd-invisible="true" hidden="">
+                        <div class="uk-navbar-item uk-width-expand">
+                            <form class="uk-search uk-search-navbar uk-width-1-1">
+                                <input class="uk-search-input" type="search" placeholder="Поиск..."
+                                    autofocus="">
+                            </form>
+                        </div>
+                        <a class="uk-navbar-toggle uk-close uk-icon" uk-close=""
+                            uk-toggle="target: .test-overlay; animation: uk-animation-fade"
+                            href="#"><svg width="14" height="14" viewBox="0 0 14 14"
+                                xmlns="http://www.w3.org/2000/svg" data-svg="close-icon">
+                                <line fill="none" stroke="#000" stroke-width="1.1" x1="1" y1="1"
+                                    x2="13" y2="13"></line>
+                                <line fill="none" stroke="#000" stroke-width="1.1" x1="13" y1="1"
+                                    x2="1" y2="13"></line>
+                            </svg></a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+</header>
