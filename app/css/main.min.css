@@ -11191,7 +11191,8 @@ h2 {
 .avatar {
   height: 50px;
   position: relative;
-  width: 50px
+  width: 50px;
+  cursor: pointer
 }
 .menu {
   top: -10px;
@@ -11209,180 +11210,6 @@ h2 {
 }
 .menu:not(.expand) {
   cursor: pointer
-}
-.menu:not(.expand):hover {
-  background: #fff
-}
-.from {
-  position: absolute;
-  -webkit-transition: opacity .2s .1s cubic-bezier(0,0,.2,1);
-  -o-transition: opacity .2s .1s cubic-bezier(0,0,.2,1);
-  transition: opacity .2s .1s cubic-bezier(0,0,.2,1)
-}
-.from-contents {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-transform-origin: 0 0;
-  -ms-transform-origin: 0 0;
-  transform-origin: 0 0;
-  -webkit-transition: -webkit-transform .3s cubic-bezier(.4,0,.2,1);
-  transition: -webkit-transform .3s cubic-bezier(.4,0,.2,1);
-  -o-transition: transform .3s cubic-bezier(.4,0,.2,1);
-  transition: transform .3s cubic-bezier(.4,0,.2,1);
-  transition: transform .3s cubic-bezier(.4,0,.2,1),-webkit-transform .3s cubic-bezier(.4,0,.2,1)
-}
-.to {
-  opacity: 0;
-  position: absolute;
-  -webkit-transition: opacity .1s cubic-bezier(.4,0,1,1);
-  -o-transition: opacity .1s cubic-bezier(.4,0,1,1);
-  transition: opacity .1s cubic-bezier(.4,0,1,1)
-}
-.to-contents {
-  -webkit-transform: scale(.55);
-  -ms-transform: scale(.55);
-  transform: scale(.55);
-  -webkit-transform-origin: 0 0;
-  -ms-transform-origin: 0 0;
-  transform-origin: 0 0;
-  -webkit-transition: -webkit-transform .3s cubic-bezier(.4,0,.2,1);
-  transition: -webkit-transform .3s cubic-bezier(.4,0,.2,1);
-  -o-transition: transform .3s cubic-bezier(.4,0,.2,1);
-  transition: transform .3s cubic-bezier(.4,0,.2,1);
-  transition: transform .3s cubic-bezier(.4,0,.2,1),-webkit-transform .3s cubic-bezier(.4,0,.2,1)
-}
-.name {
-  font-size: 14px;
-  line-height: 32px;
-  margin-left: 10px
-}
-.top {
-  background: #ffb342;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  height: 70px;
-  -webkit-transition: height .3s cubic-bezier(.4,0,.2,1);
-  -o-transition: height .3s cubic-bezier(.4,0,.2,1);
-  transition: height .3s cubic-bezier(.4,0,.2,1);
-  width: 300px
-}
-.name-large {
-  color: #efd8ef;
-  font-size: 16px;
-  line-height: 70px;
-  margin-left: 20px
-}
-.x-touch {
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -ms-flex-item-align: center;
-  -ms-grid-row-align: center;
-  align-self: center;
-  cursor: pointer;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: 50px;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  margin-left: auto;
-  width: 50px
-}
-.x {
-  background: #fff;
-  border-radius: 10px;
-  height: 20px;
-  position: relative;
-  width: 20px
-}
-.x-touch:hover .x {
-  background: #dddbe4
-}
-.line1 {
-  background: #eb7222;
-  height: 12px;
-  position: absolute;
-  -webkit-transform: translateX(9px) translateY(4px) rotate(45deg);
-  -ms-transform: translateX(9px) translateY(4px) rotate(45deg);
-  transform: translateX(9px) translateY(4px) rotate(45deg);
-  width: 2px
-}
-.line2 {
-  background: #eb7222;
-  height: 12px;
-  position: absolute;
-  -webkit-transform: translateX(9px) translateY(4px) rotate(-45deg);
-  -ms-transform: translateX(9px) translateY(4px) rotate(-45deg);
-  transform: translateX(9px) translateY(4px) rotate(-45deg);
-  width: 2px
-}
-.bottom {
-  background: #fff;
-  color: #444247;
-  font-size: 14px;
-  height: 400px;
-  padding-top: 5px;
-  width: 300px
-}
-.row {
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  height: 60px
-}
-.medium {
-  height: 30px;
-  margin-left: 16px;
-  position: relative;
-  width: 30px
-}
-.menu.expand {
-  border-radius: 6px;
-  -webkit-box-shadow: 0 10px 20px rgba(0,0,0,.1),0 6px 6px rgba(0,0,0,.16);
-  box-shadow: 0 10px 20px rgba(0,0,0,.1),0 6px 6px rgba(0,0,0,.16);
-  height: 400px;
-  width: 300px
-}
-.expand .from {
-  opacity: 0;
-  -webkit-transition: opacity .1s cubic-bezier(.4,0,1,1);
-  -o-transition: opacity .1s cubic-bezier(.4,0,1,1);
-  transition: opacity .1s cubic-bezier(.4,0,1,1)
-}
-.expand .from-contents {
-  -webkit-transform: scale(1.91);
-  -ms-transform: scale(1.91);
-  transform: scale(1.91)
-}
-.expand .to {
-  opacity: 1;
-  -webkit-transition: opacity .2s .1s cubic-bezier(0,0,.2,1);
-  -o-transition: opacity .2s .1s cubic-bezier(0,0,.2,1);
-  transition: opacity .2s .1s cubic-bezier(0,0,.2,1)
-}
-.expand .to-contents {
-  -webkit-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1)
 }
 .ns-border-r-product {
   border-radius: 40px 15px 30px 0
@@ -11449,7 +11276,7 @@ h2 {
 }
 .bottomone {
   position: relative;
-  font-size: 1,5rem
+  font-size: 12px
 }
 .bottomone a {
   text-decoration: none;
@@ -11553,7 +11380,6 @@ h2 {
   -webkit-box-shadow: 0 1px 1px #e03849,1px 1px 0 #fbfaf9 inset;
   box-shadow: 0 1px 1px #e03849,1px 1px 0 #fbfaf9 inset;
   background: #ff8082;
-  margin: 0 20px;
   -webkit-transition: margin-top .2s ease,-webkit-box-shadow .2s ease,-webkit-transform .5s ease;
   transition: margin-top .2s ease,-webkit-box-shadow .2s ease,-webkit-transform .5s ease;
   -o-transition: box-shadow .2s ease,transform .5s ease,margin-top .2s ease;
@@ -11568,7 +11394,8 @@ h2 {
   justify-content: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
-  align-items: center
+  align-items: center;
+  margin-right: 1.5em
 }
 .map div svg {
   height: 12px;
@@ -11597,10 +11424,19 @@ h2 {
   transition: transform .2s ease,fill .2s ease,-webkit-transform .2s ease
 }
 .map div:active {
-  margin-top: 5px;
   -webkit-box-shadow: 0 1px 1px #e03849,1px 1px 0 #fbfaf9 inset;
   box-shadow: 0 1px 1px #e03849,1px 1px 0 #fbfaf9 inset
 }
 .map div:active svg {
   fill: #fbfaf9
+}
+.drm {
+  border-radius: 15px;
+  padding: 10px;
+  width: 120px;
+  height: 190px;
+  z-index: -99999999
+}
+.imglogomb {
+  max-width: 60%
 }
