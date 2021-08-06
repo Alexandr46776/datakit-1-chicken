@@ -26,50 +26,19 @@
                         <img style="width:200px; height:39px;" height="auto" src="icon/logo.png" alt="Logo" uk-img>
                     </nav>
                     <div class="test-overlay uk-navbar-left  " aria-hidden="false">
-
-                        <ul style="padding-bottom: 35px;" class="uk-navbar-nav uk-margin-medium-left">
-                            <!--меню в кружке -->
-                            <div style=" position: absolute; z-index:99999999; " class="container ">
-
-                                <div class="uk-margin-bottom menu" onclick="this.classList.add('expand')">
-                                    <div class="from">
-                                        <div class="from-contents">
-                                            <div class="avatar me"></div>
-                                            <div class="name"></div>
-                                        </div>
-                                    </div>
-                                    <div class="to">
-                                        <div class="to-contents">
-                                            <div class="top">
-                                                <div class="avatar-large me"></div>
-                                                <div class="name-large"></div>
-                                                <div class="x-touch" onclick="document.querySelector('.menu').classList.remove('expand');event.stopPropagation();">
-                                                    <div class="x">
-                                                        <div class="line1"></div>
-                                                        <div class="line2"></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="bottomone  uk-button uk-width-1-1 uk-margin-remove-top uk-align-center">
-                                                <p class=""><a href="#">Меню</a></p>
-                                            </div>
-                                            <div class="bottomone  uk-button uk-width-1-1 uk-margin-remove-top uk-align-center">
-                                                <p class=""><a href="#">Акции</a></p>
-                                            </div>
-                                            <div class="bottomone  uk-button uk-width-1-1 uk-margin-remove-top uk-align-center">
-                                                <p class=""><a href="#">Рестораны</a></p>
-                                            </div>
-                                            <div class="bottomone  uk-button uk-width-1-1 uk-margin-remove-top uk-align-center">
-                                                <p class=""><a href="#">Контакты</a></p>
-                                            </div>
-                                            <div class="bottomone  uk-button uk-width-1-1 uk-margin-remove-top uk-align-center">
-                                                <p class=""><a href="#">О нас</a></p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </ul>
+                             <!-- меню-->
+                        <div class="uk-inline">
+                            <div type="button" class="avatar me"></div>
+                               <div id="parent-drop-click" uk-drop="mode: click" class="uk-drop uk-drop-bottom-left" >
+                                   <div id="parent-drop-card-click" class="drm uk-card uk-card-body uk-card-default" >
+                                           <p class="bottomone"><a href="#">Меню</a></p>
+                                           <p class="bottomone"><a href="#">Акции</a></p>        
+                                           <p class="bottomone"><a href="#">Рестораны</a></p>
+                                           <p class="bottomone"><a href="#">Контакты</a></p>
+                                           <p class="bottomone"><a href="#">О нас</a></p>          
+                                   </div>
+                               </div>
+                           </div>
 
                         <!-- Это кнопка переключения модального окна в # ссылка на модалку-->
                         <button style=" font-weight: bold;" id="buttonone" class="uk-button uk-button-default uk-margin-small-right uk-margin-large-left uk-margin-xlarge-left" type="button" uk-toggle="target: #modal-example">Найдите свой
@@ -199,17 +168,17 @@
                     <nav class="uk-navbar-container uk-margin" uk-navbar>
                         <div class="nav-overlay uk-navbar-left">
                             <ul class="uk-navbar-nav">
-                                <img src="icon/logo.png" alt="Logo" uk-img>
+                                <img class="imglogomb" src="icon/logo.png" max-width="60%" alt="Logo" uk-img>
                                 <!-- мобильное меню
                                     <li class="uk-active"><a href="#">Active</a></li>
                                     <li><a href="#">Item</a></li>
                                     -->
                             </ul>
-                            <div class="map">
-                                <div uk-toggle="target: #modal-example"><svg viewBox="0 0 24 24"><path d="M12 2c-3.87 0-7 3.13-7 7 0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/><path d="M0 0h24v24h-24z" fill="none"/></svg></div>
+                            <div class="map ">
+                                <div  class=""  uk-toggle="target: #modal-example"><svg viewBox="0 0 24 24"><path d="M12 2c-3.87 0-7 3.13-7 7 0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/><path d="M0 0h24v24h-24z" fill="none"/></svg></div>
                             </div>
                             <!-- центрирование модалки -->
-                            <a class="uk-icon-buttoncartmobile" uk-toggle uk-icon="icon: cart" href="#modal-center_"></a>
+                            <a class="uk-icon-buttoncartmobile " uk-toggle uk-icon="icon: cart" href="#modal-center_"></a>
                             <div id="modal-center_" uk-modal>
                                 <div style="width: 300px; border-radius:20px;" class="uk-modal-dialog  uk-margin-auto-vertical">
                                     <div class="uk-inline">
