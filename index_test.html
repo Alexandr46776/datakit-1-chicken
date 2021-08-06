@@ -9,121 +9,13 @@
 <body>
     <div id="cookie_notification">
         <p>Для улучшения работы сайта и его взаимодействия с пользователями мы используем файлы cookie. Продолжая работу с сайтом, Вы разрешаете использование cookie-файлов. Вы всегда можете отключить файлы cookie в настройках Вашего браузера.</p>
-        <button class="button cookie_accept">Принять Принять</button>
+        <button class="button cookie_accept">Принять</button>
     </div>
     <!-- голова -->
     <!--#include virtual="/parts/header.html" -->
 
     <!-- мобильное меню -->
-    <header id="mobile" class="uk-hidden@m ">
-        <div id="modal-full" class="uk-section uk-padding-remove-vertical">
-            <div class="containereset" class="uk-container">
-                <div class="uk-margin-remove-left  ">
-                    <div uk-sticky="sel-target: .uk-navbar-container;  cls-active: uk-navbar-sticky; ">
-                        <!-- навигация -->
-                        <nav class="uk-navbar-container uk-margin" uk-navbar>
-                            <div class="nav-overlay uk-navbar-left">
-                                <ul class="uk-navbar-nav">
-                                    <img src="icon/logo.png" alt="Logo" uk-img>
-                                    <!-- мобильное меню
-                                        <li class="uk-active"><a href="#">Active</a></li>
-                                        <li><a href="#">Item</a></li>
-                                        -->
-                                </ul>
-                                <div class="map">
-                                <div uk-toggle="target: #modal-example" ><svg  viewBox="0 0 24 24"><path d="M12 2c-3.87 0-7 3.13-7 7 0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/><path d="M0 0h24v24h-24z" fill="none"/></svg></div>
-                            </div>
-                                <!-- центрирование модалки -->
-                                <a class="uk-icon-buttoncartmobile" uk-toggle uk-icon="icon: cart" href="#modal-center_"></a>
-                                <div id="modal-center_" uk-modal>
-                                    <div style="width: 300px; border-radius:20px;" class="uk-modal-dialog  uk-margin-auto-vertical">
-                                        <div class="uk-inline">
-                                            <div id="cartitem" class="uk-card uk-card-default ">
-                                                <div class="uk-card-header">
-                                                    <div class="uk-grid-small uk-flex-middle" uk-grid>
-                                                        <div class="uk-width-auto">
-                                                            <!-- <img class="uk-border-circle" width="40" height="40" src="images/avatar.jpg"> фотография в карточке-->
-                                                        </div>
-                                                        <div class="uk-width-expand">
-                                                            <button uk-toggle="target: #modal-center_" class="uk-alert-close" type="button" uk-close></button>
-                                                            <h3 class="uk-card-title uk-margin-remove-bottom">Оформление заказа</h3>
-                                                            <p class="uk-text-meta uk-margin-remove-top"><time datetime="2018-04-01T19:00">Заказ № 3456 67</time></p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="uk-card-body">
-                                                    <p>Товаров в заказе: 2</p>
-                                                    <p>Общая сумма заказа: 274р</p>
-                                                    <p>Состав заказа:</p>
-                                                </div>
-                                                <div style="overflow-y: scroll; max-height: 120px; ">
-                                                    <div class="uk-card-header">
-                                                        <div class="uk-grid-small uk-flex-middle" uk-grid>
-                                                            <div class="uk-width-auto">
-                                                                <img class="" width="60" height="60" src="icon/burger.png">
-                                                            </div>
-                                                            <div class="uk-width-expand">
-                                                                <h3 class="uk-card-title uk-margin-remove-bottom">Название</h3>
-                                                                <p class="uk-text-meta uk-margin-remove-top"><time datetime="2018-04-01T19:00">Состав</time></p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="uk-card-header">
-                                                        <div class="uk-grid-small uk-flex-middle" uk-grid>
-                                                            <div class="uk-width-auto">
-                                                                <img class="" width="60" height="60" src="icon/burger.png">
-                                                            </div>
-                                                            <div class="uk-width-expand">
-                                                                <h3 class="uk-card-title uk-margin-remove-bottom">Название</h3>
-                                                                <p class="uk-text-meta uk-margin-remove-top"><time datetime="2018-04-01T19:00">Состав</time></p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="uk-card-footer">
-                                                    <main id='main' class='main_area'>
-                                                        <label class="button" for="dialog_state"><i class="icon ion-ios-upload-outline
-                                                              "></i> Перейти к оформлению</label>
-                                                    </main>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                </ul>
-                                <!--
-                                    <div class="nav-overlay uk-position-right ">
-                                        <a class="uk-navbar-toggle" uk-search-icon uk-toggle="target: .nav-overlay; animation: uk-animation-fade" href="#"></a>
-                                    </div>
-                                </div>
-                                 <img class="uk-border-circle" width="40" height="40" src="images/avatar.jpg">
-                                <div class="nav-overlay uk-navbar-left uk-flex-1" hidden>
-                                    <div class="uk-navbar-item uk-width-expand">
-                                        <form class="uk-search uk-search-navbar uk-width-1-1">
-                                            <input class="uk-search-input" type="search" placeholder="Search..." autofocus>
-                                        </form>
-                                    </div>
-                                    <a class="uk-navbar-toggle" uk-close uk-toggle="target: .nav-overlay; animation: uk-animation-fade" href="#"></a>
-                                </div>
-                                -->
-                        </nav>
-                        <div class="uk-width-1-2 uk-width-auto@m">
-                            <div class="overlay">
-                                <nav class="overlayMenu">
-                                    <ul role="menu">
-                                        <li><a href="#" role="menuitem">Меню</a></li>
-                                        <li><a href="#" role="menuitem">Акции</a></li>
-                                        <li><a href="#" role="menuitem">Рестораны</a></li>
-                                        <li><a href="#" role="menuitem">Контакты</a></li>
-                                        <li><a href="#" role="menuitem">О нас</a></li>
-                                    </ul>
-                                </nav>
-                            </div>
-                            <div href="#modal-full" class="navBurger" role="navigation" id="navToggle"></div>
-                        </div>
-                        </div>
-                    </div>
-    </header>
+    
     <!-- контент -->
     <main id="main">
         <!--слайдер -->
