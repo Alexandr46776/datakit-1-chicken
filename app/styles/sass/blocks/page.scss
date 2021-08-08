@@ -1,6 +1,61 @@
-:root {
-  --main-color: red;
+/*цвет иконки при наведении*/
+$hoverbtn:#6c5858;
+$header: white;
+$scrollbar-track:#e4e4e4;
+/*фон с гридиентом */
+$bg1: #f8b24f;
+$bg2: #dcac6d;
+/*cookieо*/
+$cookie: #f9f9f9;
+/*цвет скроллбара*/
+$scrollbar: #feb20d;
+/*цвет кнопок*/
+$button: #feb20d;
+/*для табов*/
+/*бекграунд табов*/
+$tabbg: #fdfdfd;
+/*цвет деталей*/
+$tabcolor:#ffb342;
+/*конец*/
+/*вход в аккаунт и регестрация*/
+$btnlog: #1059FE;
+$windowlog: #5c617e8d;
+/*для регестрации*/
+$formbg: rgba(144, 143, 143, 0.176);
+$boxbg:    linear-gradient(
+  rgb(246, 247, 249),
+  rgb(246, 247, 249)),;
+/*регестрация*/
+.formlog{
+  border-radius:50px;
 }
+.form{
+  border: none;
+  background: $formbg;
+
+}
+.namelog{
+  padding-left: 15px;
+}
+.boxlog{
+  border-radius:20px; 
+  height: 600px;
+  background:$boxbg;
+    
+}
+.nav {
+  width: 100%;
+  height: 60px;
+  padding-top: 20px;
+  opacity: 1;
+  transition: all .5s ease;
+}
+.nav-up {
+  transform: translateY(-100px);
+  opacity: 0;
+}
+
+
 
 /*cookie*/
 #cookie_notification {
@@ -14,7 +69,7 @@
   max-width: 90%;
   transform: translateX(-50%);
   padding: 25px;
-  background-color: white;
+  background-color: $cookie;
   border-radius: 4px;
   box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.4);
   z-index: 9999;
@@ -52,10 +107,10 @@ body::-webkit-scrollbar {
   overflow: scroll;
 }
 body ::-webkit-scrollbar-track {
-  background-color: #e4e4e4;
+  background-color: $scrollbar-track;
 }
 body::-webkit-scrollbar-thumb {
-  background-color: #eebe00;
+  background-color: $scrollbar;
   border-radius: 100px;
 }
 
@@ -68,202 +123,15 @@ h3 {
 
 html {
   scroll-behavior: smooth;
-  background: linear-gradient(to left, #f8b24f, #dcac6d);
+  background: linear-gradient(to left, $bg1, $bg2);
 }
 body {
   font-family: Roboto;
 }
 
 /* мобильное выдвижное меню начало*/
-.navBurger {
-  z-index: 10;
-  position: fixed;
-  right: 20px;
-  top: 5px;
-  cursor: pointer;
-  background: #111;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  background-clip: content-box;
-  width: 30px;
-  height: 24px;
-  border-top: 11px solid transparent;
-  border-bottom: 11px solid transparent;
-  -webkit-transform: rotate(0deg);
-  transform: rotate(0deg);
-  -webkit-transition: all 0.25s ease-in-out;
-  transition: all 0.25s ease-in-out;
-}
-
-.navBurger:before,
-.navBurger:after {
-  content: '';
-  position: absolute;
-  background: #111;
-  height: 2px;
-  width: 100%;
-  right: 0;
-  will-change: rotate;
-  -webkit-transform: rotate(0deg);
-  transform: rotate(0deg);
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-}
-
-.navBurger:before {
-  top: -10px;
-}
-
-.navBurger:after {
-  bottom: -10px;
-  width: 90%;
-}
-
-.navBurger.active {
-  background: transparent;
-  background-clip: content-box;
-}
-
-.navBurger.active:before {
-  -webkit-transform: rotate(135deg);
-  transform: rotate(135deg);
-  top: 0;
-  background: #eee;
-  width: 110%;
-}
-
-.navBurger.active:after {
-  bottom: 0;
-  -webkit-transform: rotate(-135deg);
-  transform: rotate(-135deg);
-  background: #eee;
-  width: 110%;
-}
-
-.overlay {
-  position: fixed;
-  background: #2a3140;
-  top: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  z-index: 10;
-  -webkit-transform-origin: right top;
-  transform-origin: right top;
-  -webkit-transform: scale(0);
-  transform: scale(0);
-  visibility: hidden;
-  -webkit-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
-  overflow: hidden;
-}
-
-.overlay.open {
-  opacity: 0.99;
-  visibility: visible;
-  -webkit-transform: scale(1);
-  transform: scale(1);
-}
-
-.overlay.open li {
-  display: block;
-  -webkit-animation: fadeInRight 0.4s cubic-bezier(0.42, 0.83, 0.7, 1.5) forwards;
-  animation: fadeInRight 0.4s cubic-bezier(0.42, 0.83, 0.7, 1.5) forwards;
-  -webkit-animation-delay: 0.4s;
-  animation-delay: 0.4s;
-  -webkit-transform: rotate(-7deg);
-  transform: rotate(-7deg);
-  -webkit-transform-origin: right bottom;
-  transform-origin: right bottom;
-}
-
-.overlay.open li:nth-of-type(2) {
-  -webkit-animation-delay: 0.5s;
-  animation-delay: 0.5s;
-}
-
-.overlay.open li:nth-of-type(3) {
-  -webkit-animation-delay: 0.6s;
-  animation-delay: 0.6s;
-}
-
-.overlay.open li:nth-of-type(4) {
-  -webkit-animation-delay: 0.7s;
-  animation-delay: 0.7s;
-}
-
-.overlay.open li:nth-of-type(5) {
-  -webkit-animation-delay: 0.8s;
-  animation-delay: 0.8s;
-}
-
-.overlayMenu ul {
-  list-style: none;
-  padding: 0;
-  margin: 0 auto;
-  display: block;
-  position: relative;
-  height: 100%;
-}
-
-.overlayMenu ul li {
-  display: block;
-  position: relative;
-  opacity: 0;
-  width: 100%;
-}
-
-.overlayMenu ul li a {
-  display: inline-block;
-  border: 1px solid rgba(255, 255, 255, 0.09);
-  color: #fff;
-  text-decoration: none;
-  font-size: 30px;
-  padding: 10px 40px 10px 40px;
-  margin: 5px 0;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
-}
-
-.overlayMenu ul li a:hover,
-.overlayMenu ul li a:active,
-.overlayMenu ul li a:focus {
-  -webkit-transform: translateX(-2px);
-  transform: translateX(-2px);
-  padding-left: 80px;
-  outline: 1px solid rgba(255, 255, 255, 0.3);
-  background: rgba(255, 255, 255, 0.03);
-}
-
-.locked {
-  overflow: hidden;
-}
-
-@-webkit-keyframes fadeInRight {
-  0% {
-    opacity: 0;
-    left: 50px;
-  }
-  100% {
-    opacity: 1;
-    left: 0;
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-}
-
-@keyframes fadeInRight {
-  0% {
-    opacity: 0;
-    left: 50px;
-  }
-  100% {
-    opacity: 1;
-    left: 0;
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
+.burger{
+  color:#444247;
 }
 /* мобильное выдвижное меню конец*/
 
@@ -274,13 +142,13 @@ body {
 }
 
 #buttonone {
-  background: #feb20d;
+  background: $button;
   border-radius: 50px;
 }
 
 /* цвет головы/////////////////////////////////////////////*/
 #head {
-  background-color: white;
+  background-color: $header;
 }
 .uk-sticky {
   background-color: #ffffff00;
@@ -305,7 +173,7 @@ main {
   margin-left: 10px;
 }
 .uk-icon-button:hover {
-  color: #e63d3d;
+  color: $hoverbtn;
   transition: all 0.3s ease-in-out;
 }
 
@@ -319,10 +187,10 @@ main {
 
 .tabs {
   position: relative;
-  background: #fdfdfd;
+  background: $tabbg;
   padding: 50px;
   padding-bottom: 80px;
-  height: 250px;
+  height: 280px;
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   border-radius: 5px;
   min-width: auto;
@@ -336,7 +204,7 @@ main {
 .tabs ul li label {
   font-weight: bold;
   font-size: 18px;
-  color: #428bff;
+  color: $tabcolor;
 }
 
 .tabs ul {
@@ -412,7 +280,7 @@ main {
   max-width: 100%;
   margin: 0 auto;
   height: 4px;
-  background: #ffb342;
+  background: $tabcolor;
   border-radius: 1px;
 }
 
@@ -436,7 +304,7 @@ main {
 }
 
 .tabs .content section h2 {
-  color: #ffb342;
+  color: $tabcolor;
   display: none;
 }
 
@@ -446,18 +314,18 @@ main {
   display: block;
   width: 30px;
   height: 3px;
-  background: #428bff;
+  background: $tabcolor;
   margin-top: 5px;
   left: 1px;
 }
 
 .tabs input[name='tab-control']:nth-of-type(1):checked ~ ul > li:nth-child(1) > label {
   cursor: default;
-  color: #ffb342;
+  color: $tabcolor;
 }
 
 .tabs input[name='tab-control']:nth-of-type(1):checked ~ ul > li:nth-child(1) > label svg {
-  color: #ffb342;
+  color: $tabcolor;
 }
 
 @media (max-width: 600px) {
@@ -476,11 +344,11 @@ main {
 
 .tabs input[name='tab-control']:nth-of-type(2):checked ~ ul > li:nth-child(2) > label {
   cursor: default;
-  color: #ffb342;
+  color: $tabcolor;
 }
 
 .tabs input[name='tab-control']:nth-of-type(2):checked ~ ul > li:nth-child(2) > label svg {
-  color: #ffb342;
+  color: $tabcolor;
 }
 
 @media (max-width: 600px) {
@@ -499,11 +367,11 @@ main {
 
 .tabs input[name='tab-control']:nth-of-type(3):checked ~ ul > li:nth-child(3) > label {
   cursor: default;
-  color: #ffb342;
+  color: $tabcolor;
 }
 
 .tabs input[name='tab-control']:nth-of-type(3):checked ~ ul > li:nth-child(3) > label svg {
-  color: #ffb342;
+  color: $tabcolor;
 }
 
 @media (max-width: 600px) {
@@ -522,11 +390,11 @@ main {
 
 .tabs input[name='tab-control']:nth-of-type(4):checked ~ ul > li:nth-child(4) > label {
   cursor: default;
-  color: #ffb342;
+  color: $tabcolor;
 }
 
 .tabs input[name='tab-control']:nth-of-type(4):checked ~ ul > li:nth-child(4) > label svg {
-  fill: #428bff;
+  fill: #bec5cf;
 }
 
 @media (max-width: 600px) {
@@ -694,7 +562,7 @@ a.button {
   padding: 0.25em 1em;
   box-sizing: border-box;
   background: #ffffff;
-  color: #feb20d;
+  color: $button;
   text-decoration: none;
   letter-spacing: 0.075em;
   line-height: 2rem;
@@ -728,7 +596,7 @@ a.button.positive {
 a.button.positive:hover {
   border-color: #468fb6;
   color: #fff;
-  background-color: #feb20d;
+  background-color: $button;
 }
 
 .icon {
@@ -965,9 +833,7 @@ h2 {
   border-top: 0px;
 }
 
-.text {
-  font-family: 'Roboto', sans-serif;
-}
+
 .uk-icon-buttoncart:hover {
   color: #af9292;
   transition: all 0.3s ease-in-out;
@@ -978,41 +844,7 @@ h2 {
 }
 
 /*кнопопчка карты*/
-.map div {
-  width: 30px;
-  height: 30px;
-  border-radius: 25px;
-  box-shadow: 0 1px 1px #e03849, 1px 1px 0 #fbfaf9 inset;
-  background: #ff8082;
-  transition: box-shadow 0.2s ease, transform 0.5s ease, margin-top 0.2s ease;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: 1.5em;
-}
-.map div svg {
-  height: 12px;
-  width: 12px;
-  transform: scale(1, 1);
-  fill: #fbfaf9;
-}
-.map div:hover {
-  transform: scale(1.1, 1.1);
-  box-shadow: 0 0 10px #e03849, 1px 1px 150px #fbfaf9 inset;
-}
-.map div:hover svg {
-  transform: scale(1.1, 1.1);
-  fill: #e03849;
-  transition: transform 0.2s ease, fill 0.2s ease;
-}
-.map div:active {
- 
-  box-shadow: 0 1px 1px #e03849, 1px 1px 0 #fbfaf9 inset;
-}
-.map div:active svg {
-  fill: #fbfaf9;
-}
+
 .drm{
   border-radius:15px;
    padding:10px; 
@@ -1023,4 +855,56 @@ h2 {
 /*лого для мобилки*/
 .imglogomb{
 max-width:60%;
+}
+/*карта еды*/
+.order-input-quantity {
+  width: 100px;
+  text-align: center;
+}
+.uk-button {
+border-radius: 50px;
+}
+.catalog-table h5 {
+margin-bottom: 0;
+}
+.table-product-image {
+height: 80px;
+}
+.catalog-table td {
+padding: 3px 5px;
+}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+width: 80%;
+margin-left:auto;
+margin-right: auto; 
+margin-top:20px; 
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+.catalog-detail__comp{
+  padding: 0px 0px -250px 0px;
+}
+@media (max-width: 950px) {
+  .catalog-detail__comp{
+    padding: 0px 0px 0px 0px;
+    overflow-x: scroll;
+  }
+}
+.wind{
+  margin-bottom:200px;
+}
+@media (max-width: 950px) {
+  .wind{
+    margin-bottom:0px;
+  }
 }
