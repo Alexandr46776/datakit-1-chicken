@@ -26,12 +26,9 @@
                 <div class="uk-grid-margin uk-grid uk-grid-stack " uk-grid>
                     <div class="uk-width-1-1@m">
                         <div class="boxlog uk-margin uk-width-large uk-margin-auto uk-card uk-card-default uk-card-body uk-box-shadow-large">
-                            <button uk-toggle="target: #modal-reg" class="uk-alert-close" type="button" uk-close></button>
+                            <button uk-toggle="target: #modal-log" class="uk-alert-close" type="button" uk-close></button>
                             <div class="nav">
-                                <ul>
-                                  <li class="logli" class="signin-active"><a class="btn">Вход</a></li>
-                                  <li class="logli"  uk-toggle="#modal-reg" class="signup-inactive"><a class="btn">Регистрация</a></li>
-                                </ul>
+                                <h3 class="uk-card-title uk-text-center">С возвращением!</h3>
                               </div>
                             
                             <form>
@@ -39,7 +36,7 @@
                                     <label class="namelog" for="username">ПОЧТА</label>
                                     <div class="uk-inline uk-width-1-1">
                                         <span class="uk-form-icon" uk-icon="icon: mail"></span>
-                                        <input class="formlog uk-input uk-form-large" type="text">
+                                        <input class="form formlog uk-input uk-form-large" type="text">
                                     </div>
                                 </div>
                                
@@ -47,7 +44,7 @@
                                     <label  class="namelog" for="username">ПАРОЛЬ</label>
                                     <div  class="uk-inline uk-width-1-1">
                                         <span class="uk-form-icon" uk-icon="icon: lock"></span>
-                                        <input  class="formlog uk-input uk-form-large" type="password">	
+                                        <input  class="form formlog uk-input uk-form-large" type="password">	
                                     </div>
                                 </div>
                             <div class="uk-inline uk-width-1-1">
@@ -56,10 +53,10 @@
                             </div>
                                 <div class="uk-margin-large-top">
                                 <div class="uk-margin">
-                                    <button  class="formlog uk-button uk-button-primary uk-button-large uk-width-1-1">Login</button>
+                                    <button  class="form formlog uk-button uk-button-primary uk-button-large uk-width-1-1">Login</button>
                                 </div>
                                 <div class="uk-text-small uk-text-center">
-                                    Not registered? <a href="#">Create an account</a>
+                                    Not registered? <a   uk-toggle="#modal-reg">Create an account</a>
                                 </div>
                                 </div>
                             </form>
@@ -76,40 +73,41 @@
         <div id="modal-reg" uk-modal>
     <div class=" uk-section uk-flex uk-flex-middle uk-animation-fade " uk-height-viewport uk-animation-fade>
         <div class="uk-width-1-1">
-          <div class="uk-container">
+          <div class="uk-container ">
             <div class="uk-grid-margin uk-grid uk-grid-stack" uk-grid>
               <div class="uk-width-5-6 uk-margin-auto">
                 <div class="uk-card uk-card-default uk-card-large uk-grid-collapse uk-child-width-1-2@s uk-margin uk-border-rounded uk-position-relative uk-overflow-hidden" uk-grid>
-                  <div class="uk-flex-last@s uk-card-media-right uk-cover-container">
+                    <div class="uk-flex-last@s uk-card-media-right uk-cover-container">
                     <img src="https://s1.1zoom.ru/b5050/526/Sausage_Olive_Ham_Cheese_Wine_Wood_planks_Plate_545927_1920x1200.jpg" alt="" uk-cover>
                     <canvas width="600" height="400"></canvas>
                   </div>
                   <div>
+                    <a  uk-toggle="#modal-log" class="uk-icon-button uk-margin-small-right" uk-icon="reply"></a>
                     <div class="uk-card-body">
                       <h3 class="uk-card-title uk-text-bold uk-text-uppercase uk-text-primary">Регистрация</h3>
                       <form>
                         <div class="uk-margin">
                           <label class="uk-form-label" for="form-stacked-text">Имя</label>
                           <div class="uk-form-controls">
-                            <input class="uk-input" id="form-stacked-text" type="text" placeholder="">
+                            <input class="form formlog uk-input" id="form-stacked-text" type="text" placeholder="">
                           </div>
                         </div>
                         <div class="uk-margin">
                           <label class="uk-form-label" for="form-stacked-text">Почта</label>
                           <div class="uk-form-controls">
-                            <input class="uk-input" id="form-stacked-text" type="text" placeholder="">
+                            <input class="form formlog uk-input" id="form-stacked-text" type="text" placeholder="">
                           </div>
                         </div>
                         <div class="uk-margin">
                           <label class="uk-form-label" for="form-stacked-text">Username</label>
                           <div class="uk-form-controls">
-                            <input class="uk-input" id="form-stacked-text" type="text" placeholder="">
+                            <input class="form formlog uk-input" id="form-stacked-text" type="text" placeholder="">
                           </div>
                         </div>
                         <div class="uk-margin">
                           <label class="uk-form-label" for="form-stacked-text">Пароль</label>
                           <div class="uk-form-controls">
-                            <input class="uk-input" id="form-stacked-text" type="password" placeholder="">
+                            <input class="form formlog uk-input" id="form-stacked-text" type="password" placeholder="">
                           </div>
                           <small class="uk-flex uk-flex-middle uk-margin-small-top">Минимум 6 символов, по крайней мере одна буква и одна цифра.</small>
                         </div>
@@ -120,7 +118,7 @@
                         </div>
                         <div class="uk-margin">
                           <div class="uk-form-controls">
-                            <button class="uk-button uk-button-primary">Создать аккаунт</button>
+                            <button class="form uk-button uk-button-primary">Создать аккаунт</button>
                           </div>
                         </div>
                       </form>
