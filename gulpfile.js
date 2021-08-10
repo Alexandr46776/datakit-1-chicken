@@ -60,11 +60,22 @@ function scripts() {
 }
 
 function styles() {
+	return src([`app/styles/${preprocessor}/*.*`, `!app/styles/${preprocessor}/_*.*`], { sourcemaps: true })
+		.pipe(eval(`${preprocessor}glob`)())
+		.pipe(eval(preprocessor)())
+		.pipe(autoprefixer({ overrideBrowserslist: ['last 3 versions'], grid: true }))
+		.pipe(cleancss({ level: { 1: { specialComments: 0 } }, format: 'beautify' }))
+		.pipe(rename({ suffix: ".min" }))
+		.pipe(dest('app/css', { sourcemaps: '.' }))
+		.pipe(browserSync.stream())
+}
+
+function buildstyles() {
 	return src([`app/styles/${preprocessor}/*.*`, `!app/styles/${preprocessor}/_*.*`])
 		.pipe(eval(`${preprocessor}glob`)())
 		.pipe(eval(preprocessor)())
-		.pipe(autoprefixer({ overrideBrowserslist: ['last 10 versions'], grid: true }))
-		.pipe(cleancss({ level: { 1: { specialComments: 0 } }, format: 'beautify' }))
+		.pipe(autoprefixer({ overrideBrowserslist: ['last 3 versions'], grid: true }))
+		.pipe(cleancss({ level: { 1: { specialComments: 0 } }, format: 'minify' }))
 		.pipe(rename({ suffix: ".min" }))
 		.pipe(dest('app/css'))
 		.pipe(browserSync.stream())
@@ -123,8 +134,9 @@ function startwatch() {
 
 exports.scripts = scripts
 exports.styles  = styles
+exports.buildstyles  = buildstyles
 exports.images  = images
 exports.deploy  = deploy
 exports.assets  = series(scripts, styles, images)
-exports.build   = series(cleandist, scripts, styles, images, buildcopy, buildhtml)
+exports.build   = series(cleandist, scripts, buildstyles, images, buildcopy, buildhtml)
 exports.default = series(scripts, styles, images, parallel(browsersync, startwatch))
