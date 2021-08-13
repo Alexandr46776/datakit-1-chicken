@@ -4,10 +4,9 @@ $hoverbtn:#6c5858;
 $header: white;
 $scrollbar-track:#e4e4e4;
 
-/*фон с гридиентом */
+/*фон*/
 
-$bg1: #f8b24f;
-$bg2: #dcac6d;
+$bg1: #7c7973;
 
 /*cookieо*/
 
@@ -32,9 +31,9 @@ $tabbg: #fdfdfd;
 
 $tabcolor:#ffb342;
 
-/*Цвет чекбокса с крестиком*/
+/*Цвет чекбокса/верхнего разделителя/колличество продукта*/
 
-$checkbox-cross:#ee1f1f;
+$checkbox:#fa9907;
 
 /*конец*/
 
@@ -157,7 +156,7 @@ h3 {
 
 html {
     scroll-behavior: smooth;
-    background: linear-gradient(to left, $bg1, $bg2);
+    background: $bg1, ;
 }
 
 body {
@@ -997,7 +996,7 @@ tr:nth-child(even) {
 }
 
 .wind {
-    margin-bottom: 200px;
+    margin-bottom: 55px;
 }
 
 @media (max-width: 950px) {
@@ -1006,28 +1005,42 @@ tr:nth-child(even) {
     }
 }
 
+@media (min-width: 1500px) {
+    .wind {
+        margin-bottom: 125px;
+    }
+}
+
 
 /*Чекбокс с крестиком*/
 
-.uk-checkbox-cross:focus {
-    border-color: $checkbox-cross;
+.uk-checkbox:focus {
+    border-color: $checkbox;
 }
 
-.uk-checkbox-cross:checked,
-.uk-checkbox-cross:indeterminate {
-    background-color: $checkbox-cross;
+.uk-checkbox:checked,
+.uk-checkboxs:indeterminate {
+    background-color: $checkbox;
     border-color: transparent;
 }
 
-.uk-checkbox-cross:checked:focus,
-.uk-checkbox-cross:indeterminate:focus {
-    background-color: $checkbox-cross;
+.uk-checkbox:checked:focus,
+.uk-checkbox:indeterminate:focus {
+    background-color: $checkbox;
 }
 
-.uk-checkbox-cross:checked {
-    background-image: url("/app/images/285155608058211.jpg");
+.uk-label-danger {
+    background-color: $checkbox;
+    color: #fff;
+    width: 30px;
+    height: 30px;
 }
 
-.uk-checkbox-cross:indeterminate {
-    background-image: url("/app/images/285155608058211.jpg");
+.divider-bottom {
+    border-top: 4px solid $checkbox;
+    padding-top: 20px;
+}
+.map{
+    width:500px;
+     height:400px;
 }
