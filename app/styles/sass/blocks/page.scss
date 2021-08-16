@@ -6,7 +6,7 @@ $scrollbar-track:#e4e4e4;
 
 /*фон*/
 
-$bg1: #7c7973;
+$bg1: #e9e5dd;
 
 /*cookieо*/
 
@@ -81,6 +81,11 @@ $boxbg: linear-gradient( rgb(246, 247, 249), rgb(246, 247, 249)),
 .nav-up {
     transform: translateY(-100px);
     opacity: 0;
+}
+
+#headone {
+    margin-bottom: -20px;
+    margin-top: -20px;
 }
 
 
@@ -161,6 +166,24 @@ html {
 
 body {
     font-family: Roboto;
+}
+
+.cirk {
+    font-size: .625rem;
+    position: absolute;
+    top: -10px;
+    margin-left: 2%;
+    right: 2px;
+    min-width: 18px;
+    height: 18px;
+    background-color: $button;
+}
+
+.cirkmob {
+    font-size: 10px;
+    margin-left: 4%;
+    height: 18px;
+    background-color: $button;
 }
 
 
@@ -1040,7 +1063,43 @@ tr:nth-child(even) {
     border-top: 4px solid $checkbox;
     padding-top: 20px;
 }
-.map{
-    width:500px;
-     height:400px;
+
+//карта//
+.map {
+    width: 100%;
+    height: 480px;
+}
+
+//кнопка меню //
+.custom-btn {
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    font-weight: 300;
+    text-align: center;
+    font-size: 18px;
+    color: navy;
+}
+
+.btn-1>a {
+    text-decoration: none;
+    color: rgb(13, 5, 18);
+}
+
+.btn-1>a:hover {
+    color: #929daf;
+}
+
+.uk-heading-line> ::before,
+.uk-heading-line> ::after {
+    border-bottom: calc(0.2px + 0.05em) solid #434040;
+}
+
+a.uk-link-heading:hover,
+.uk-link-heading a:hover,
+.uk-link-toggle:hover .uk-link-heading,
+.uk-link-toggle:focus .uk-link-heading {
+    color: $tabcolor;
+    text-decoration: none;
 }
