@@ -44,3 +44,9 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   checkCookies()
 })
+  // для закрытия меню при клике, которое находится в хедере и вызывается при клике на меню
+$(document).click( function(event){
+  if( $(event.target).closest(".btn-1").length ) return;
+  $(".m_menu .btn-1 ").hide();
+  event.stopPropagation();
+});
