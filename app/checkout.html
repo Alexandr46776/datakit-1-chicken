@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <title></title>
+    <!--#include virtual="/parts/meta.html" -->
+</head>
+
+<body>
+    <!-- голова -->
+    <!--#include virtual="/parts/header.html" -->
+
+    <!-- контент -->
+    <main style="min-height: 75vh;" id="main">
+        <div style="max-width: 1400px; margin: auto; background-color: rgb(255, 255, 255);">
+            <h3 class="zac uk-heading-small uk-padding-small">Оформление заказа</h3>
+            <div class=" uk-grid-match" uk-grid>
+                <div class="uk-width-2-3@l uk-child-width-2-2@m">
+
+                    <div class="uk-grid uk-grid-medium uk-child-width-1-2 uk-padding-large uk-padding-remove-top uk-padding-remove-bottom">
+
+                        <div>
+                            <div style="margin-bottom: 25px;" class="uk-margin">
+                                <label class="uk-align-left " style="margin: 0;">Имя</label>
+                                <input type="input" class="form__field" placeholder="Name" name="name" id='name' required minlength="3" maxlength="20" />
+                                <span class="uk-text-danger"></span>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="uk-margin">
+                                <label class="uk-align-left " style=" margin: 0;">Телефон</label>
+                                <input type="input" class="form__field" type="tel" placeholder="Name" value="+7 " placeholder="9008888888" name="name" id='name' required minlength="3" maxlength="13" />
+                                <span class="uk-text-danger"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="jsf" uk-filter="target: .js-filter" style="margin-top: 0%;">
+                            <div class="uk-section " style="padding-top: 0px;padding-bottom: 0px;">
+                                <div class="uk-container">
+                                    <ul class="uk-subnav uk-subnav-pill ns-subnav-checkout">
+                                        <li class="uk-active ns-subnav-checkout-hover" style="padding-left: 50px" uk-filter-control="[data-color='courier']"><a href="#" style="padding-left: 20px; padding-right: 20px;">Курьер</a></li>
+                                        <li class="ns-subnav-checkout-hover" style="padding-left: 0px" uk-filter-control="[data-color='pickup']"><a href="#" style="padding-left: 20px; padding-right: 20px;">Самовывоз</a></li>
+
+                                        <!--еще что то  -->
+
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- class="   uk-child-width-1-2 uk-child-width-1-3@m "  -->
+                            <ul class="uk-child-width-3-2@s   tabcheck js-filter     uk-margin-bottom" uk-grid style="padding-right: 40px;    border-radius: 20px; background-color: #f3f3f3; margin-left: 24px;  ">
+                                <li max-width:100px; data-color="courier">
+                                    <div class="">
+                                        <div>
+
+                                            <div id="result"></div>
+                                            <div class="uk-margin">
+                                                <label class="uk-align-left " style="margin: 0;">Район доставки</label>
+                                                <label class="select" for="slct">
+                                                <select id="slct" required="required">
+                                                  <option value="" disabled="disabled" selected="selected">Выберите адрес</option>
+                                                  <option >Адрес1</option>
+                                                  <option >Адрес2</option>
+                                                  <option >Адрес3</option>
+                                                  <option >Адрес4</option>
+                                                  <option >Адрес4</option>
+                                                  <option >Адрес5</option>
+                                                  <option >Адрес6</option>
+                                                </select>
+                                                <svg>
+                                                  <use xlink:href="#select-arrow-down"></use>
+                                                </svg>
+                                              </label>
+                                                <!-- SVG-->
+                                                <svg class="sprites">
+                                                <symbol id="select-arrow-down" viewbox="0 0 10 6">
+                                                  <polyline points="1 1 5 5 9 1"></polyline>
+                                                </symbol>
+                                              </svg>
+                                            </div>
+                                            <form id="myForm" method="post" novalidate>
+                                                <div class="uk-margin">
+                                                    <label class="uk-align-left " style="margin: 0;">Улица</label>
+                                                    <input type="input" class="form__field" placeholder="" name="name" id='name' required minlength="3" maxlength="40" />
+                                                    <span class="uk-text-danger"></span>
+                                                </div>
+                                                <div uk-grid>
+                                                    <div class="uk-width-auto@m" style=" padding-bottom: 15px">
+                                                        <ul class="uk-tab-left" uk-tab="connect: #component-tab-left; animation: uk-animation-fade">
+                                                            <li><a href="#">Квартира или офис</a></li>
+                                                            <li><a href="#">Частный дом</a></li>
+
+                                                        </ul>
+                                                    </div>
+                                                    <div class="uk-width-expand@m">
+                                                        <ul id="component-tab-left" class="uk-switcher">
+                                                            <li>
+                                                                <div style="width: 100%;">
+                                                                    <div class="uk-margin-auto-right">
+                                                                        <label style="margin: auto;
+                                                        margin-bottom: -6px;" class="uk-align-left " style="margin: 0;">Номер дома</label>
+                                                                        <input type="text" class="ff form__field" placeholder="" name="name" id='name' required minlength="3" maxlength="8" />
+                                                                        <span class="uk-text-danger"></span>
+                                                                    </div>
+                                                                    <div style="padding-bottom: 25px;">
+                                                                        <label style="margin: auto;margin-bottom: -6px;" class="uk-align-left " style="margin: 0;">Квартира/офис</label>
+                                                                        <input style=" margin-right: 110px;" type="input" class="ff form__field" placeholder="" name="name" id='name' required minlength="3" maxlength="10" />
+                                                                        <span class="uk-text-danger"></span>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="uk-margin" style="padding-bottom: 25px;">
+                                                                    <label style="margin: auto; margin-bottom: -6px;" class="uk-align-left " style="margin: 0; width: 50%;">Номер дома</label>
+                                                                    <input type="input" class="ff form__field" placeholder="" name="name" id='name' required minlength="3" maxlength="10" />
+                                                                    <span class="uk-text-danger"></span>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+
+
+
+                                            </form>
+
+                                        </div>
+
+                                        <!-- /.uk-container -->
+                                    </div>
+
+                                    <!-- /.uk-section -->
+                                </li>
+
+
+                                <li data-color="pickup">
+                                    <div class="uk-margin" style="padding-top: 20px;">
+                                        <label class=" " style=" width: 100%; text-align: left;">Район доставки</label>
+                                        <label class="select" for="slct">
+                                            <select id="slct" required="required" style="max-width: 300px;  text-align: left;">
+                                              <option value="" disabled="disabled" selected="selected">Выберите адрес</option>
+                                              <option >Адрес1</option>
+                                              <option>Адрес2</option>
+                                              <option >Адрес3</option>
+                                              <option >Адрес4</option>
+                                              <option >Адрес4</option>
+                                              <option >Адрес5</option>
+                                              <option >Адрес6</option>
+                                            </select>
+                                            <svg >
+                                              <use xlink:href="#select-arrow-down"></use>
+                                            </svg>
+                                          </label>
+                                        <!-- SVG-->
+                                        <svg class="sprites">
+                                            <symbol id="select-arrow-down" viewbox="0 0 10 6">
+                                              <polyline points="1 1 5 5 9 1"></polyline>
+                                            </symbol>
+                                          </svg>
+                                    </div>
+
+                                    <iframe class="" src="https://yandex.ru/map-widget/v1/?um=constructor%3A3f1908100941e909e68272fce674e33ca47852797caf519bc2be3e3fa3da8947&amp;source=constructor" width="95%" height="500" style="margin-bottom:20px; margin-right: 20px;" frameborder="0"></iframe>
+
+                                </li>
+
+                            </ul>
+                            <div class="uk-margin-large-left">
+                                <div class="form__group field" style="padding-bottom:5vh ;">
+                                    <input type="input" class="form__field" placeholder="Name" name="name" id='name' required />
+                                    <label for="name" class="form__label">Комментарий к заказу</label>
+                                </div>
+                            </div>
+                            <div class="uk-card uk-card-default uk-padding uk-margin-medium-right uk-margin-medium-left  ns-attention" style="text-align: left; padding-right: 60px;">
+                                <div>
+                                    <input class="uk-checkbox" type="checkbox">
+                                    <span> Бесконтактная доставка</span>
+                                </div>
+                                <div>Курьер передаст ваш заказ на безопасном расстоянии.<br>Обратите внимание: данная функция работает только при оплате онлайн. </div>
+
+                            </div>
+
+                            <div class="uk-margin-medium-top uk-margin-large-left">
+                                <h3> Время доставки</h3>
+                                <label><input class="uk-checkbox" type="checkbox" checked> Ближайшее</label>
+                                <form>
+                                    <div class="uk-margin">
+                                        <h4>Выберите время:</h4>
+                                        <div uk-form-custom="target: > * > span:first-child" class="uk-padding-remove">
+
+                                            <h6 class="uk-margin-remove uk-text-meta" style="padding-left: 10px;">Час:</h6>
+                                            <select>
+                                                
+                                                <option value="1">14</option>
+                                                <option value="2">15</option>
+                                                <option value="3">16</option>
+                                                <option value="4">17</option>
+                                                <option value="4">18</option>
+                                                <option value="4">19</option>
+                                                <option value="4">20</option>
+                                                <option value="4">21</option>
+                                                <option value="4">22</option>
+                                            </select>
+
+                                            <button class="uk-button uk-button-default" type="button" tabindex="-1">
+                                                <span></span>
+                                                <span uk-icon="icon: chevron-down"></span>
+                                            </button>
+
+                                        </div>
+                                        <div uk-form-custom="target: > * > span:first-child">
+
+                                            <h6 class="uk-margin-remove uk-text-meta " style="padding-left: 10px;">Минута:</h6>
+                                            <select>
+                                                
+                                                <option value="1">00</option>
+                                                <option value="2">15</option>
+                                                <option value="3">30</option>
+                                                <option value="4">45</option>
+                                            </select>
+
+                                            <button class="uk-button uk-button-default" type="button" tabindex="-1">
+                                                <span></span>
+                                                <span uk-icon="icon: chevron-down"></span>
+                                            </button>
+
+                                        </div>
+                                        <div uk-form-custom="target: > * > span:first-child">
+
+                                            <h6 class="uk-margin-remove uk-text-meta" style="padding-left: 10px;">Дата:</h6>
+                                            <select>
+                                                
+                                                <option value="1">Сегодня (15.09)</option>
+                                                <option value="2">Завтра (16.09)</option>
+                                                <option value="3">Послезавтра (17.09)</option>
+                                            </select>
+
+                                            <button class="uk-button uk-button-default" type="button" tabindex="-1">
+                                                <span></span>
+                                                <span uk-icon="icon: chevron-down"></span>
+                                            </button>
+
+                                        </div>
+                                    </div>
+
+                                </form>
+                                <div class="uk-margin">
+                                    <h3> Способ оплаты</h3>
+                                    <div class="uk-form-controls uk-form-controls-text">
+                                        <label><input class="uk-radio" type="radio" name="radio1" checked> Наличныйми курьеру</label><br>
+                                        <div class="uk-margin">
+                                            <label style="margin: auto; margin-bottom: -6px;" class="uk-align-left ">Сдача с</label>
+                                            <input type="input" class="ff form__field ns-input" style=" width: 70px;  margin-left: 10px; text-align: center;" placeholder="Name" name="name" id='name' required minlength="3" maxlength="5" />
+
+                                            <span class="uk-text">₽</span>
+                                        </div>
+
+                                        <label><input class="uk-radio" type="radio" name="radio1"> Картой курьеру</label>
+                                    </div>
+                                </div>
+                                <div class="ns-amount " style="width: 75%; margin-top: 80px;">
+
+                                    <div class="ns-amount-txt"><span>Сумма заказа</span><span><d class="uk-text-small">820</d> ₽</span></div>
+                                    <div class="ns-amount-txt uk-text-normal " style="margin-left: 0%; vertical-align: bottom; margin-top: 10px; "><span class=" uk-text-emphasis " style="font-size: 1.2rem; ">Итого к оплате</span><span class="uk-text-bold uk-text-emphasis " style="font-size: 1.4rem; margin-top: -5px;"><d >820</d> ₽</span></div>
+
+                                </div>
+                                <button class="uk-button uk-button-primary" style="width: 70%; margin-top: 15px; margin-bottom: 30px; margin-left: 0%; margin-right: 10%;" type="submit">Оформить заказ</button>
+                                <div class="uk-text-small" style="margin-bottom: 20px;">
+                                    Нажимая кнопку «Оформить заказ», я даю свое согласие на обработку моих персональных данных, в соответствии с Федеральным законом от 27.07.2006 года №152-Ф3 «О персональных данных», на условиях и для целей, определенных в
+                                    <a href="/privacy.html" target="_blank">Согласии на обработку персональных данных</a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+                <div class="uk-width-1-3@l uk-child-width-1-2@m">
+                    <div class="">
+                        <div class="uk-card-body uk-overflow-auto" uk-grid>
+                            <ul class="uk-list  uk-flex-column">
+                                <div class="uk-text-meta uk-text-xsmall">
+                                    <h3 style="margin-bottom: 15px;">Состав заказа</h3>
+
+                                </div>
+                                <li class="uk-visible-toggle">
+                                    <arttcle>
+                                        <div class="uk-grid-small uk-grid" uk-grid="">
+                                            <div class="uk-width-1-4 uk-first-column">
+                                                <div class="tm-ratio tm-ratio-1-3">
+                                                    <a class="tm-media-box" style="width:10px;" href="product.html">
+                                                        <figure class="tm-media-box-wrap"><img width="60" height="60" class="uk-border-circle" src="images/edward-guk-357344-unsplash.jpg" alt="Бургер"></figure>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="uk-width-expand">
+                                                <div class="uk-text-bolder uk-text-small uk-first-column ">*Название бургера*</div>
+
+                                                <div class="uk-margin-xsmall uk-grid-small uk-flex-middle uk-grid" uk-grid="">
+                                                    <div class="uk-text-meta uk-text-xsmall">Бургер</div>
+                                                    <div class="uk-text-meta uk-text-xsmall">1 × 6 999 р</div>
+                                                    <div class="order-form__age">
+                                                        <a class="uk-icon-link uk-text-danger uk-invisible-hover uk-icon" href="#" uk-icon="icon: trash; ratio: 1" uk-tooltip="Remove" title="" aria-expanded="false">
+                                                            <path fill="none" stroke="#000" stroke-width="1.06" d="M16,16 L4,4"></path>
+                                                            <path fill="none" stroke="#000" stroke-width="1.06" d="M16,4 L4,16"></path>
+                                                            </svg>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </arttcle>
+                                </li>
+
+                            </ul>
+
+                            <hr style=" margin:0px; margin-left: 9%; width: 40%;">
+                            <ul class="uk-list uk-list-divider uk-flex-column">
+                                <li class="uk-visible-toggle">
+                                    <arttcle>
+                                        <div class="uk-grid-small uk-grid" uk-grid="">
+                                            <div class="uk-width-1-4 uk-first-column">
+                                                <div class="tm-ratio tm-ratio-1-3">
+                                                    <a class="tm-media-box" style="width:10px;" href="product.html">
+                                                        <figure class="tm-media-box-wrap"><img width="60" height="60" class="uk-border-circle" src="images/edward-guk-357344-unsplash.jpg" alt="Бургер"></figure>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="uk-width-expand">
+                                                <div class="uk-text-bolder uk-text-small uk-first-column ">*Название бургера*</div>
+
+                                                <div class="uk-margin-xsmall uk-grid-small uk-flex-middle uk-grid" uk-grid="">
+                                                    <div class="uk-text-meta uk-text-xsmall">Бургер</div>
+                                                    <div class="uk-text-meta uk-text-xsmall">1 × 6 999 р</div>
+                                                    <div class="order-form__age">
+                                                        <a class="uk-icon-link uk-text-danger uk-invisible-hover uk-icon" href="#" uk-icon="icon: trash; ratio: 1" uk-tooltip="Remove" title="" aria-expanded="false">
+                                                            <path fill="none" stroke="#000" stroke-width="1.06" d="M16,16 L4,4"></path>
+                                                            <path fill="none" stroke="#000" stroke-width="1.06" d="M16,4 L4,16"></path>
+                                                            </svg>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </arttcle>
+                                </li>
+
+                            </ul>
+                            <hr style=" margin:0px; margin-left: 9%; width: 45%;">
+                            <ul class="uk-list uk-list-divider uk-flex-column">
+                                <li class="uk-visible-toggle">
+                                    <arttcle>
+                                        <div class="uk-grid-small uk-grid" uk-grid="">
+                                            <div class="uk-width-1-4 uk-first-column">
+                                                <div class="tm-ratio tm-ratio-1-3">
+                                                    <a class="tm-media-box" style="width:10px;" href="product.html">
+                                                        <figure class="tm-media-box-wrap"><img width="60" height="60" class="uk-border-circle" src="images/edward-guk-357344-unsplash.jpg" alt="Бургер"></figure>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="uk-width-expand">
+                                                <div class="uk-text-bolder uk-text-small uk-first-column ">*Название бургера*</div>
+
+                                                <div class="uk-margin-xsmall uk-grid-small uk-flex-middle uk-grid" uk-grid="">
+                                                    <div class="uk-text-meta uk-text-xsmall">Бургер</div>
+                                                    <div class="uk-text-meta uk-text-xsmall">1 × 6 999 р</div>
+                                                    <div class="order-form__age">
+                                                        <a class="uk-icon-link uk-text-danger uk-invisible-hover uk-icon" href="#" uk-icon="icon: trash; ratio: 1" uk-tooltip="Remove" title="" aria-expanded="false">
+                                                            <path fill="none" stroke="#000" stroke-width="1.06" d="M16,16 L4,4"></path>
+                                                            <path fill="none" stroke="#000" stroke-width="1.06" d="M16,4 L4,16"></path>
+                                                            </svg>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </arttcle>
+                                </li>
+
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+            </div>
+    </main>
+    <!-- footer -->
+    <!--#include virtual="/parts/footer.html" -->
+    <!--#include virtual="/parts/footer_scripts.html" -->
+
+    <!--#include virtual="/parts/site-pages.html" -->
+</body>
+
+</html>
