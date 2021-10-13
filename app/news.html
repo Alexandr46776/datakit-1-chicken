@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <title></title>
+    <!--#include virtual="/parts/meta.html" -->
+</head>
+
+<body>
+    <!-- голова -->
+    <!--#include virtual="/parts/header.html" -->
+
+    <!-- контент -->
+    <main style="min-height: 75vh;" id="main">
+        <div style="max-width: 1400px; margin: auto ">
+            <main class="uk-container">
+                <div class="uk-grid">
+                    <div class="uk-width-1-1">
+                        <h2 class="uk-margin-medium-bottom">Новости</h2>
+                    </div>
+                    <!--Начало карточек-->
+                    <section class="uk-section uk-section-small uk-section-default uk-padding-remove-bottom">
+                        <div class="uk-container uk-container-expand uk-margin-large-bottom">
+                            <div class="uk-grid uk-grid-medium uk-child-width-1-2@s uk-child-width-1-3@m uk-child-width-1-4@l  uk-child-width-1-4@xl uk-grid-match " data-uk-grid="masonry: true" data-uk-sortable="handle: .drag-icon">
+                                <!--карточка -->
+                                <div class="">
+                                    <div class="cartnews uk-card uk-card-small uk-card-default">
+                                        <div class="uk-card-media">
+                                            <div class="uk-inline-clip uk-transition-toggle" tabindex="0">
+                                                <img class="lazy imgnews" data-src="https://picsum.photos/400/300/?random={{item.num}}" data-width="400" data-height="300" data-uk-img alt="" src="img/transp.gif">
+                                            </div>
+
+                                        </div>
+                                        <div class="uk-card-body">
+                                            <!--заголовок -->
+                                            <h7 class="uk-margin-small-bottom uk-margin-remove-adjacent ">12.07.21</h7>
+                                            <h6 class="uk-margin-small-bottom uk-margin-remove-adjacent uk-text-bold">Название</h6>
+                                            <!--текст в карте -->
+                                            <!--текст в карте -->
+                                            <p class="uk-text-small uk-text-muted" v-html="item.answer">Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.</p>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <!--конец карточки-->
+                                <!-- карточка -->
+                                <div class="">
+                                    <div class="cartnews uk-card uk-card-small uk-card-default">
+                                        <div class="uk-card-media">
+                                            <div class="uk-inline-clip uk-transition-toggle" tabindex="0">
+                                                <img class="lazy imgnews" data-src="https://picsum.photos/400/470/?random=4" data-width="400" data-height="470" data-uk-img alt="" src="img/transp.gif">
+                                            </div>
+                                        </div>
+                                        <div class="uk-card-body">
+                                            <!--заголовок -->
+                                            <h7 class="uk-margin-small-bottom uk-margin-remove-adjacent ">12.07.21</h7>
+                                            <h6 class="uk-margin-small-bottom uk-margin-remove-adjacent uk-text-bold">Название</h6>
+                                            
+                                            <!--текст в карте -->
+                                            <p class="uk-text-small uk-text-muted">Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--конец карточки-->
+
+                                <!--карточка -->
+                                <div class="">
+                                    <div class="cartnews uk-card uk-card-small uk-card-default">
+                                        <div class="uk-card-media">
+                                            <div class="uk-inline-clip uk-transition-toggle" tabindex="0">
+                                                <img class="lazy imgnews" data-src="https://picsum.photos/400/460/?random=2" data-width="400" data-height="460" data-uk-img alt="" src="img/transp.gif">
+                                            </div>
+                                        </div>
+                                        <div class="uk-card-body">
+                                            <!--заголовок -->
+                                            <h7 class="uk-margin-small-bottom uk-margin-remove-adjacent ">12.07.21</h7>
+                                            <h6 class="uk-margin-small-bottom uk-margin-remove-adjacent uk-text-bold">Название</h6>
+                                          
+                                            <!--текст в карте -->
+                                            <p class="uk-text-small uk-text-muted">Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую
+                                                коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--конец карточки -->
+                                <!--карточка-->
+                                <div class="photo-card">
+                                    <div class="cartnews uk-card uk-card-small uk-card-default">
+                                        <div class="uk-card-media">
+                                            <div class="uk-inline-clip uk-transition-toggle" tabindex="0">
+                                                <img class="lazy imgnews" data-src="https://picsum.photos/400/200/?random=1" data-width="400" data-height="200" data-uk-img alt="" src="img/transp.gif">
+                                            </div>
+
+                                        </div>
+                                        <div class="uk-card-body">
+                                            <!--заголовок -->
+                                            <h7 class="uk-margin-small-bottom uk-margin-remove-adjacent ">12.07.21</h7>
+                                            <h6 class="uk-margin-small-bottom uk-margin-remove-adjacent uk-text-bold">Название</h6>
+                                           
+                                            <!--текст в карте -->
+                                            <p class="uk-text-small uk-text-muted">Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую
+                                                коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации
+                                                в новое врем</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--конец карточки -->
+                                <!-- карточка -->
+                                <div class="">
+                                    <div class="cartnews uk-card uk-card-small uk-card-default">
+                                        <div class="uk-card-media">
+                                            <div class="uk-inline-clip uk-transition-toggle" tabindex="0">
+                                                <img class="lazy imgnews" data-src="https://picsum.photos/400/470/?random=4" data-width="400" data-height="470" data-uk-img alt="" src="img/transp.gif">
+                                            </div>
+                                        </div>
+                                        <div class="uk-card-body">
+                                            <!--заголовок -->
+                                            <h7 class="uk-margin-small-bottom uk-margin-remove-adjacent ">12.07.21</h7>
+                                            <h6 class="uk-margin-small-bottom uk-margin-remove-adjacent uk-text-bold">Название</h6>
+                                          
+                                            <!--текст в карте -->
+                                            <p class="uk-text-small uk-text-muted">Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--конец карточки-->
+                                <!--карточка-->
+                                <div class="photo-card">
+                                    <div class="cartnews uk-card uk-card-small uk-card-default">
+                                        <div class="uk-card-media">
+                                            <div class="uk-inline-clip uk-transition-toggle" tabindex="0">
+                                                <img class="lazy imgnews" data-src="https://picsum.photos/400/200/?random=1" data-width="400" data-height="200" data-uk-img alt="" src="img/transp.gif">
+                                            </div>
+
+                                        </div>
+                                        <div class="uk-card-body">
+                                            <!--заголовок -->
+                                            <h7 class="uk-margin-small-bottom uk-margin-remove-adjacent ">12.07.21</h7>
+                                            <h6 class="uk-margin-small-bottom uk-margin-remove-adjacent uk-text-bold">Название</h6>
+                                         
+                                            <!--текст в карте -->
+                                            <p class="uk-text-small uk-text-muted">Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую
+                                                коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации
+                                                в новое врем</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--конец карточки -->
+                                <!--карточка -->
+                                <div class="">
+                                    <div class="cartnews uk-card uk-card-small uk-card-default">
+                                        <div class="uk-card-media">
+                                            <div class="uk-inline-clip uk-transition-toggle" tabindex="0">
+                                                <img class="lazy imgnews" data-src="https://picsum.photos/400/460/?random=2" data-width="400" data-height="460" data-uk-img alt="" src="img/transp.gif">
+                                            </div>
+                                        </div>
+                                        <div class="uk-card-body">
+                                            <!--заголовок -->
+                                            <h7 class="uk-margin-small-bottom uk-margin-remove-adjacent ">12.07.21</h7>
+                                            <h6 class="uk-margin-small-bottom uk-margin-remove-adjacent uk-text-bold">Название</h6>
+                                        
+                                            <!--текст в карте -->
+                                            <p class="uk-text-small uk-text-muted">Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую
+                                                коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--конец карточки -->
+                                <!--карточка -->
+                                <div class="">
+                                    <div class="cartnews uk-card uk-card-small uk-card-default">
+                                        <div class="uk-card-media">
+                                            <div class="uk-inline-clip uk-transition-toggle" tabindex="0">
+                                                <img class="lazy imgnews" data-src="https://picsum.photos/400/300/?random={{item.num}}" data-width="400" data-height="300" data-uk-img alt="" src="img/transp.gif">
+                                            </div>
+
+                                        </div>
+                                        <div class="uk-card-body">
+                                            <!--заголовок -->
+                                            <h7 class="uk-margin-small-bottom uk-margin-remove-adjacent ">12.07.21</h7>
+                                            <h6 class="uk-margin-small-bottom uk-margin-remove-adjacent uk-text-bold">Название</h6>
+                                           
+                                            <!--текст в карте -->
+                                            <p class="uk-text-small uk-text-muted" v-html="item.answer">Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.</p>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <!--конец карточки-->
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <div class="uk-width-1-3"></div>
+        </div>
+
+        </main>
+    </main>
+    <!-- footer -->
+    <!--#include virtual="/parts/footer.html" -->
+    <!--#include virtual="/parts/footer_scripts.html" -->
+
+    <!--#include virtual="/parts/site-pages.html" -->
+</body>
+
+</html>
