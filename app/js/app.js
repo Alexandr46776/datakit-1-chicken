@@ -50,3 +50,27 @@ $(document).click( function(event){
   $(".m_menu .btn-1 ").hide();
   event.stopPropagation();
 });
+(function() {
+	var module = angular.module("app", [
+    "ngMaterial",
+    "ngAnimate",
+    "ngAria",
+    "ngMessages",
+    "mdPickers"
+  ]); 
+  
+  module.controller("MainCtrl", ['$scope',  '$mdpTimePicker', function($scope,  $mdpTimePicker){
+    $scope.currentDate = new Date();
+  	
+   
+    
+    this.showTimePicker = function(ev) 
+    {
+    	$mdpTimePicker($scope.currentTime, {
+        targetEvent: ev
+      }).then(function(selectedDate) {
+        $scope.currentTime = selectedDate;
+      });;
+    }  
+  }]);
+})();
