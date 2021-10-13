@@ -232,11 +232,11 @@
                                 <a uk-tooltip="title: Корзина; pos: bottom-center" title="cart" href="" class="uk-icon-button uk-margin-small-right" uk-icon="cart"></a>
                                 <span class="cirk uk-badge">3</span>
                             </li>
-                            <div style="border-radius:20px; max-width: 100vh;  width: 600px; height:470px;" uk-dropdown="mode: click">
+                            <div style="padding-top: 0px; border-radius:20px; max-width: 100vh;  width: 600px; height:430px;" uk-dropdown="mode: click">
                                 <div class="cartcrt  uk-flex uk-flex-column tm-shadow-remove">
                                     <header class="uk-card-header uk-flex uk-flex-middle">
                                         <div class="uk-grid-small uk-flex-1 uk-grid" uk-grid="">
-                                            <div class="uk-width-expand uk-first-column">
+                                            <div style="padding-top: 0px;"class="uk-width-expand uk-first-column">
                                                 <div class="uk-h2">Корзина</div>
                                             </div><button class="uk-offcanvas-close uk-close uk-icon" type="button" uk-close=""><svg width="14"
                                                     height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
@@ -412,26 +412,25 @@
                     </ul>
 
                     <!-- корзина конец -->
-
                     <a class=" uk-navbar-toggle uk-search-icon uk-icon" uk-search-icon="" uk-toggle="target: .test-overlay; animation: uk-animation-fade" href="#"><svg
-                            style="width:20px; height:20px;" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"
-                            data-svg="search-icon">
-                            <circle fill="none" stroke="#000" stroke-width="1.1" cx="9" cy="9" r="7"></circle>
-                            <path fill="none" stroke="#000" stroke-width="1.1" d="M14,14 L18,18 L14,14 Z"></path>
-                        </svg></a>
-
-                    <div class="uk-navbar-left uk-flex-1 test-overlay" aria-hidden="true" wfd-invisible="true" hidden="">
-                        <div class="uk-navbar-item uk-width-expand">
-                            <form class="uk-search uk-search-navbar uk-width-1-1">
-                                <input class="uk-search-input" type="search" placeholder="Поиск..." autofocus="">
-                            </form>
-                        </div>
-                        <a class="uk-navbar-toggle uk-close uk-icon" uk-close="" uk-toggle="target: .test-overlay; animation: uk-animation-fade" href="#"><svg width="14"
-                            height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg" data-svg="close-icon">
-                            <line fill="none" stroke="#000" stroke-width="1.1" x1="1" y1="1" x2="13" y2="13"></line>
-                            <line fill="none" stroke="#000" stroke-width="1.1" x1="13" y1="1" x2="1" y2="13"></line>
-                        </svg></a>
+                        style="width:20px; height:20px;" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"
+                        data-svg="search-icon">
+                        <circle fill="none" stroke="#000" stroke-width="1.1" cx="9" cy="9" r="7"></circle>
+                        <path fill="none" stroke="#000" stroke-width="1.1" d="M14,14 L18,18 L14,14 Z"></path>
+                    </svg></a>
+                </div>
+                <div class="uk-navbar-left uk-flex-1 test-overlay" aria-hidden="true" wfd-invisible="true" hidden="">
+                    <div class="uk-navbar-item uk-width-expand">
+                        <form class="uk-search uk-search-navbar uk-width-1-1">
+                            <input class="uk-search-input" type="search" placeholder="Поиск..." autofocus="">
+                        </form>
                     </div>
+                    <a class="uk-navbar-toggle uk-close uk-icon" uk-close="" uk-toggle="target: .test-overlay; animation: uk-animation-fade" href="#"><svg width="14"
+                        height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg" data-svg="close-icon">
+                        <line fill="none" stroke="#000" stroke-width="1.1" x1="1" y1="1" x2="13" y2="13"></line>
+                        <line fill="none" stroke="#000" stroke-width="1.1" x1="13" y1="1" x2="1" y2="13"></line>
+                    </svg></a>
+                </div>
             </nav>
             </div>
             </div>
