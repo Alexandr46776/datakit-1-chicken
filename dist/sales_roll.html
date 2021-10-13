@@ -1,0 +1,1293 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.7.1/dist/css/uikit.min.css" />
+<link rel='stylesheet prefetch'
+    href='https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css'>
+<!-- <link href="css/header.css" rel="stylesheet">
+<link href="css/mystyle.css" rel="stylesheet"> -->
+<link href="css/main.min.css" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- голова -->
+    <header style="border-bottom: 1px solid rgb(202, 202, 202);">
+    <!-- код окна которое выскакивает при нажатии оформить -->
+    <input type="checkbox" name="dialog_state" id="dialog_state" class="dialog_state">
+    <div id='dialog'>
+        <label id="dlg-back" for="dialog_state"></label>
+        <div id='dlg-wrap'>
+            <h2 id='dlg-header'>Хотите зайти в аккаунт ?</h2>
+            <div id='dlg-content'>Чтобы продолжить оформление заказа необходимо выполнить вход или регестрацию.
+            </div>
+            <div id='dlg-prompt'>
+                <label id="dlg-close" for="dialog_state">
+                    <div class='button positive' uk-toggle="#modal-log"><i class="icon ion-ios-checkmark-empty"></i>
+                        Продолжить
+                    </div>
+                </label>
+                <label id="dlg-close" for="dialog_state">
+                    <div class='button'><i class="icon ion-ios-close-empty"></i> Отмена</div>
+                </label>
+            </div>
+        </div>
+    </div>
+    <!--начало вход -->
+    <div id="modal-log" uk-modal>
+        <div class="" class=" uk-modal-dialog uk-modal-body uk-section uk-section-muted uk-flex uk-flex-middle ">
+            <div class="uk-width-1-1">
+                <div class="uk-container">
+                    <div class="uk-grid-margin uk-grid uk-grid-stack " uk-grid>
+                        <div class="uk-width-1-1@m">
+                            <div class="boxlog uk-margin uk-width-large uk-margin-auto uk-card uk-card-default uk-card-body uk-box-shadow-large">
+                                <button uk-toggle="target: #modal-log" class="uk-alert-close" type="button" uk-close></button>
+                                <div class="nav">
+                                    <h3 class="uk-card-title uk-text-center">С возвращением!</h3>
+                                </div>
+
+                                <form>
+                                    <div class="uk-margin">
+                                        <label class="namelog" for="username">ПОЧТА</label>
+                                        <div class="uk-inline uk-width-1-1">
+                                            <span class="uk-form-icon" uk-icon="icon: mail"></span>
+                                            <input class="form formlog uk-input uk-form-large" type="text">
+                                        </div>
+                                    </div>
+
+                                    <div class="uk-margin">
+                                        <label class="namelog" for="username">ПАРОЛЬ</label>
+                                        <div class="uk-inline uk-width-1-1">
+                                            <span class="uk-form-icon" uk-icon="icon: lock"></span>
+                                            <input class="form formlog uk-input uk-form-large" type="password">
+                                        </div>
+                                    </div>
+                                    <div class="uk-inline uk-width-1-1">
+                                        <input type="checkbox" id="checkbox" />
+                                        <label for="checkbox"><span class="ui"></span>Запомнить пароль</label>
+                                    </div>
+                                    <div class="uk-margin-large-top">
+                                        <div class="uk-margin">
+                                            <button class="form formlog uk-button  btncart btn-1 uk-button-large uk-width-1-1">Login</button>
+                                        </div>
+                                        <div class="uk-text-small uk-text-center">
+                                            Not registered? <a uk-toggle="#modal-reg">Create an account</a>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!--конец входа -->
+    <!--начало регистрации -->
+    <div id="modal-reg" uk-modal>
+        <div class=" uk-section uk-flex uk-flex-middle uk-animation-fade " uk-height-viewport uk-animation-fade>
+            <div class="uk-width-1-1">
+                <div style="
+                overflow-x: hidden;" class="uk-container ">
+                    <div class="uk-grid-margin uk-grid uk-grid-stack" uk-grid>
+                        <div class="uk-width-5-6 uk-margin-auto">
+                            <div class="uk-card uk-card-default uk-card-large uk-grid-collapse uk-child-width-1-2@s uk-margin uk-border-rounded uk-position-relative uk-overflow-hidden" uk-grid>
+                                <div class="uk-flex-last@s uk-card-media-right uk-cover-container">
+                                    <img src="https://s1.1zoom.ru/b5050/526/Sausage_Olive_Ham_Cheese_Wine_Wood_planks_Plate_545927_1920x1200.jpg" alt="" uk-cover>
+                                    <canvas width="600" height="400"></canvas>
+                                </div>
+                                <div>
+                                    <a uk-toggle="#modal-log" class="uk-icon-button uk-margin-small-right" uk-icon="reply"></a>
+                                    <div class="uk-card-body">
+                                        <h3 class="uk-card-title uk-text-bold uk-text-uppercase uk-text-primary">
+                                            Регистрация</h3>
+                                        <form>
+                                            <div class="uk-margin">
+                                                <label class="uk-form-label" for="form-stacked-text">Имя</label>
+                                                <div class="uk-form-controls">
+                                                    <input class="form formlog uk-input" id="form-stacked-text" type="text" placeholder="">
+                                                </div>
+                                            </div>
+                                            <div class="uk-margin">
+                                                <label class="uk-form-label" for="form-stacked-text">Почта</label>
+                                                <div class="uk-form-controls">
+                                                    <input class="form formlog uk-input" id="form-stacked-text" type="text" placeholder="">
+                                                </div>
+                                            </div>
+                                            <div class="uk-margin">
+                                                <label class="uk-form-label" for="form-stacked-text">Username</label>
+                                                <div class="uk-form-controls">
+                                                    <input class="form formlog uk-input" id="form-stacked-text" type="text" placeholder="">
+                                                </div>
+                                            </div>
+                                            <div class="uk-margin">
+                                                <label class="uk-form-label" for="form-stacked-text">Пароль</label>
+                                                <div class="uk-form-controls">
+                                                    <input class="form formlog uk-input" id="form-stacked-text" type="password" placeholder="">
+                                                </div>
+                                                <small class="uk-flex uk-flex-middle uk-margin-small-top">Минимум 6
+                                                    символов, по крайней мере одна буква и одна цифра.</small>
+                                            </div>
+                                            <div class="uk-margin">
+                                                <div class="uk-form-controls">
+                                                    <label><input class="uk-checkbox uk-margin-small-right"
+                                                            type="checkbox"><small>Accept our <a href="#">Terms of
+                                                                Service</a> and <a href="#">Privacy
+                                                                Policy</a>.</small></label>
+                                                </div>
+                                            </div>
+                                            <div class="uk-margin">
+                                                <div class="uk-form-controls">
+                                                    <button class="form uk-button uk-button-primary">Создать
+                                                        аккаунт</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="uk-visible@m">
+
+        <!--окно в корзине -->
+
+        <div id="head" uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; ">
+            <nav id="global-container" class="uk-navbar-container uk-margin uk-navbar" uk-navbar="">
+                <nav class="uk-inline uk-navbar uk-margin-top" uk-navbar>
+                    <a href="/">
+                        <img style="width:200px; height:39px;  margin-left: 20px;" height="auto" src="icon/logo.png" alt="Logo" uk-img>
+                    </a>
+                    <li style="margin-left: 50px; list-style: none; text-decoration: none;"><a href="#"><span class="textclr uk-margin-xsmall-right uk-icon "
+                        uk-icon="icon: receiver; ratio: .75;"><svg width="15" height="15"
+                            viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path fill="none" stroke="#000" stroke-width="1.01"
+                                d="M6.189,13.611C8.134,15.525 11.097,18.239 13.867,18.257C16.47,18.275 18.2,16.241 18.2,16.241L14.509,12.551L11.539,13.639L6.189,8.29L7.313,5.355L3.76,1.8C3.76,1.8 1.732,3.537 1.7,6.092C1.667,8.809 4.347,11.738 6.189,13.611">
+                            </path>
+                        </svg>
+                    </span><span class="tm-pseudo textclr"><a class="header-phone" href="tel:88003452020" target="_blank" style="color:black; margin-left: -20px;">8 (800) 345 20 20</a></span>
+                        </a>
+                    </li>
+
+                </nav>
+                <div class="test-overlay uk-navbar-left uk-margin-medium-left " aria-hidden="false">
+
+                    <!-- меню-->
+
+                    <div class="uk-inline uk-margin-left">
+                        <div class="uk-inline">
+                            <button class="uk-button uk-button-default btn_menu" type="button"><svg   width="15px" height="15px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                                y="0px" viewBox="0 0 512 512" style="fill: #ff0000; margin-bottom: 2px; enable-background:new 0 0 512 512;" xml:space="preserve">
+                                <path   
+                                    d="M256,0C114.613,0,0,114.617,0,256c0,141.391,114.613,256,256,256s256-114.609,256-256C512,114.617,397.387,0,256,0z
+                                                            M256,128c17.674,0,32,14.328,32,32c0,17.68-14.326,32-32,32s-32-14.32-32-32C224,142.328,238.326,128,256,128z M304,384h-96
+                                                           c-8.836,0-16-7.156-16-16c0-8.836,7.164-16,16-16h16v-96h-16c-8.836,0-16-7.156-16-16c0-8.836,7.164-16,16-16h64
+                                                           c8.836,0,16,7.164,16,16v112h16c8.836,0,16,7.164,16,16C320,376.844,312.836,384,304,384z" />
+                            </svg>
+                           Меню</button>
+                            <div style="border-radius:10px;" uk-dropdown="mode: click; animation: uk-animation-slide-top-small; duration: 300;">
+                                <div style="max-width:100px">
+                                    <ul style="margin-bottom: -1vh; padding: 0px; padding-left: unset;" class="check">
+                                        <div>
+                                            <li><a href="del.html">Доставка</a></li>
+                                            <li><a href="sales.html">Акции</a></li>
+                                            <li><a href="news.html">Новости</a></li>
+                                        </div>
+
+                                    </ul>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Это кнопка переключения модального окна в # ссылка на модалку-->
+                    <button style=" font-weight: bold;" class="uk-button uk-button-default uk-margin-small-right uk-margin-left  btncart btn-1" type="button" uk-toggle="target: #modal-example">Найдите свой
+                        адрес</button>
+                    <!-- карта -->
+                    <div id="modal-example" uk-modal>
+                        <div id="modalone" class="uk-modal-dialog uk-modal-body">
+                            <h2 class="uk-modal-title">Найдите где вы живете</h2>
+                            <button uk-toggle="target: #modal-example" class="uk-alert-close" type="button" uk-close></button>
+                            <div class="gm-err-container">
+                                <iframe class="map" src="https://yandex.ru/map-widget/v1/?um=constructor%3A5c2ad2d98d5a0578044e741d050d5c5c46de99ab9e3a955dcea8c4869cea77f0&amp;source=constructor" frameborder="0"></iframe>
+                            </div>
+
+                            <p class="uk-text-right"></p>
+                            </p>
+                        </div>
+                    </div>
+                    <!--  <span uk-icon="icon: phone"></span>
+                    <a class="uk-link-text" href="#">+88005553535</a> -->
+
+                </div>
+                <!--    <divclass="uk-navbar-item"><span class="uk-margin-xsmall-right uk-icon" uk-icon="icon: clock; ratio: .75;"><svg width="15" height="15" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"> <circle fill="none" stroke="#000" stroke-width="1.1" cx="10" cy="10" r="9"></circle> <rect x="9" y="4" width="1" height="7"></rect> <path fill="none" stroke="#000" stroke-width="1.1" d="M13.018,14.197 L9.445,10.625"></path></svg></span>Daily 10:00–22:00</div> -->
+
+                <div class="test-overlay uk-navbar-right  " aria-hidden="false">
+                    <!-- иконка входа в аккаунт -->
+                    <li style="list-style: none;">
+
+                        <a uk-toggle="target: #modal-log" id="modal-log" uk-tooltip="title: Аккаунт; pos: bottom-center" title="sign-in" href="" class="uk-icon-button uk-margin-small-right" uk-icon="sign-in"></a>
+                    </li>
+                    <!--НОВЫЙ КЛАСС WRAP_CART -->
+                    <ul class="wrap_cart uk-navbar-nav">
+                        <!-- корзина начало -->
+
+                        <div class="uk-inline ">
+                            <li>
+                                <a uk-tooltip="title: Корзина; pos: bottom-center" title="cart" href="" class="uk-icon-button uk-margin-small-right" uk-icon="cart"></a>
+                                <span class="cirk uk-badge">3</span>
+                            </li>
+                            <div style="padding-top: 0px; border-radius:20px; max-width: 100vh;  width: 600px; height:430px;" uk-dropdown="mode: click">
+                                <div class="cartcrt  uk-flex uk-flex-column tm-shadow-remove">
+                                    <header class="uk-card-header uk-flex uk-flex-middle">
+                                        <div class="uk-grid-small uk-flex-1 uk-grid" uk-grid="">
+                                            <div style="padding-top: 0px;"class="uk-width-expand uk-first-column">
+                                                <div class="uk-h2">Корзина</div>
+                                            </div><button class="uk-offcanvas-close uk-close uk-icon" type="button" uk-close=""><svg width="14"
+                                                    height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
+                                                    <line fill="none" stroke="#000" stroke-width="1.1" x1="1" y1="1" x2="13" y2="13"></line>
+                                                    <line fill="none" stroke="#000" stroke-width="1.1" x1="13" y1="1" x2="1" y2="13"></line>
+                                                </svg></button>
+                                        </div>
+                                    </header>
+
+                                    <div class="uk-card-body uk-overflow-auto">
+
+                                        <div class="uk-height-small">
+                                            <div class="js-wrapper">
+                                                <div style="overflow-x:hidden;" uk-overflow-auto="selContainer: .uk-height-medium; selContent: .js-wrapper">
+
+                                                    <div class="" uk-grid>
+                                                        <ul class="uk-list">
+                                                            <li class="uk-visible-toggle">
+                                                                <arttcle>
+                                                                    <div class="imgeat uk-grid-small uk-grid" uk-grid="">
+                                                                        <div class="uk-width-1-4 uk-first-column">
+                                                                            <div>
+                                                                                <a style="width:10px;" href="product.html">
+                                                                                    <figure><img width="60" height="60" class="uk-border-circle" src="images\8b24ab185c8cbd7b8a4a20234f15338e.png" alt="Бургер"></figure>
+                                                                                </a>
+
+                                                                            </div>
+
+                                                                        </div>
+                                                                        <div class="txt grouptext2 textcart uk-card-body" style="text-align: left;">
+                                                                            <h1> Пицца 3 сыра</h1>
+                                                                            <p>пицца </p>
+                                                                        </div>
+                                                                        <div class="counter-block">
+                                                                            <button class="sprite sprite-minus" type="button" name="button"></button>
+                                                                            <input type="number" name="adults" value="2" id="adults">
+                                                                            <button class="sprite sprite-plus" type="button" name="button"></button>
+                                                                        </div>
+                                                                        <div class="cartheader uk-width-expand">
+                                                                            <div class="uk-grid-small uk-flex-middle uk-grid cartbrg" uk-grid="">
+                                                                                <div class="uk-text-bolder">6 999 р</div>
+
+                                                                                <div>
+                                                                                    <a class="uk-icon-link uk-text-danger uk-invisible-hover uk-icon" href="#" uk-icon="icon: trash; ratio: 1" uk-tooltip="Remove" title="" aria-expanded="false">
+                                                                                        <path fill="none" stroke="#000" stroke-width="1.06" d="M16,16 L4,4"></path>
+                                                                                        <path fill="none" stroke="#000" stroke-width="1.06" d="M16,4 L4,16"></path>
+                                                                                        </svg>
+                                                                                    </a>
+                                                                                </div>
+                                                                            </div>
+
+                                                                        </div>
+                                                                        <hr>
+                                                                    </div>
+                                                                    <hr style="margin: 0;">
+                                                                </arttcle>
+                                                            </li>
+
+                                                        </ul>
+                                                        <ul class="uk-list">
+                                                            <li class="uk-visible-toggle">
+                                                                <arttcle>
+                                                                    <div class="imgeat uk-grid-small uk-grid" uk-grid="">
+                                                                        <div class="uk-width-1-4 uk-first-column">
+                                                                            <div>
+                                                                                <a style="width:10px;" href="product.html">
+                                                                                    <figure><img width="60" height="60" class="uk-border-circle" src="images\8b24ab185c8cbd7b8a4a20234f15338e.png" alt="Бургер"></figure>
+                                                                                </a>
+
+                                                                            </div>
+
+                                                                        </div>
+                                                                        <div class="txt grouptext2 textcart uk-card-body" style="text-align: left;">
+                                                                            <h1> Пицца 3 сыра</h1>
+                                                                            <p>пицца </p>
+                                                                        </div>
+                                                                        <div class="counter-block">
+                                                                            <button class="sprite sprite-minus" type="button" name="button"></button>
+                                                                            <input type="number" name="adults" value="2" id="adults">
+                                                                            <button class="sprite sprite-plus" type="button" name="button"></button>
+                                                                        </div>
+                                                                        <div class="cartheader uk-width-expand">
+                                                                            <div class="uk-grid-small uk-flex-middle uk-grid cartbrg" uk-grid="">
+                                                                                <div class="uk-text-bolder">6 999 р</div>
+
+                                                                                <div>
+                                                                                    <a class="uk-icon-link uk-text-danger uk-invisible-hover uk-icon" href="#" uk-icon="icon: trash; ratio: 1" uk-tooltip="Remove" title="" aria-expanded="false">
+                                                                                        <path fill="none" stroke="#000" stroke-width="1.06" d="M16,16 L4,4"></path>
+                                                                                        <path fill="none" stroke="#000" stroke-width="1.06" d="M16,4 L4,16"></path>
+                                                                                        </svg>
+                                                                                    </a>
+                                                                                </div>
+                                                                            </div>
+
+                                                                        </div>
+                                                                        <hr>
+                                                                    </div>
+                                                                    <hr style="margin: 0;">
+                                                                </arttcle>
+                                                            </li>
+
+                                                        </ul>
+                                                        <ul class="uk-list">
+                                                            <li class="uk-visible-toggle">
+                                                                <arttcle>
+                                                                    <div class="imgeat uk-grid-small uk-grid" uk-grid="">
+                                                                        <div class="uk-width-1-4 uk-first-column">
+                                                                            <div>
+                                                                                <a style="width:10px;" href="product.html">
+                                                                                    <figure><img width="60" height="60" class="uk-border-circle" src="images\8b24ab185c8cbd7b8a4a20234f15338e.png" alt="Бургер"></figure>
+                                                                                </a>
+
+                                                                            </div>
+
+                                                                        </div>
+                                                                        <div class="txt grouptext2 textcart uk-card-body" style="text-align: left;">
+                                                                            <h1> Пицца 3 сыра</h1>
+                                                                            <p>пицца </p>
+                                                                        </div>
+                                                                        <div class="counter-block">
+                                                                            <button class="sprite sprite-minus" type="button" name="button"></button>
+                                                                            <input type="number" name="adults" value="2" id="adults">
+                                                                            <button class="sprite sprite-plus" type="button" name="button"></button>
+                                                                        </div>
+                                                                        <div class="cartheader uk-width-expand">
+                                                                            <div class="uk-grid-small uk-flex-middle uk-grid cartbrg" uk-grid="">
+                                                                                <div class="uk-text-bolder">6 999 р</div>
+
+                                                                                <div>
+                                                                                    <a class="uk-icon-link uk-text-danger uk-invisible-hover uk-icon" href="#" uk-icon="icon: trash; ratio: 1" uk-tooltip="Remove" title="" aria-expanded="false">
+                                                                                        <path fill="none" stroke="#000" stroke-width="1.06" d="M16,16 L4,4"></path>
+                                                                                        <path fill="none" stroke="#000" stroke-width="1.06" d="M16,4 L4,16"></path>
+                                                                                        </svg>
+                                                                                    </a>
+                                                                                </div>
+                                                                            </div>
+
+                                                                        </div>
+                                                                        <hr>
+                                                                    </div>
+                                                                    <hr style="margin: 0;">
+                                                                </arttcle>
+                                                            </li>
+
+                                                        </ul>
+                                                    </div>
+
+                                                </div>
+
+
+
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                    <footer style=" padding: 10px 40px;" class="uk-card-footer ns-pdng-promo">
+                                        <div class="uk-grid-small uk-grid" uk-grid="">
+                                            <div style="display: flex;" class="uk-inline"><input style="overflow-x: hidden; width: 150px; border-radius:10px;" class="uk-input uk-form-width-small" placeholder="Промо-код" type="text">
+                                                <a href="" style="width: 50px; height: 50px;" class=" btncart btn-1 uk-icon-button uk-margin-small-right" uk-icon="check"></a>
+                                                <p class="grouptext2">
+                                                    Зарегистрируйтесь, чтобы<br> получать бонусы</p>
+                                            </div>
+
+                                        </div>
+
+                                    </footer>
+                                    <div id="btn3" class=" uk-grid-small uk-child-width-1-1 uk-child-width-1-2@m uk-margin-small uk-grid" uk-grid="">
+                                        <div><a style=" width: 80%;  border-radius:10px; margin-left: -2%;" class="btncart btn-1 uk-position-bottom-center uk-button uk-button-primary uk-width-1-1 " href="checkout.html">Оформить заказ на сумму 680Р</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                    </ul>
+
+                    <!-- корзина конец -->
+                    <a class=" uk-navbar-toggle uk-search-icon uk-icon" uk-search-icon="" uk-toggle="target: .test-overlay; animation: uk-animation-fade" href="#"><svg
+                        style="width:20px; height:20px;" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"
+                        data-svg="search-icon">
+                        <circle fill="none" stroke="#000" stroke-width="1.1" cx="9" cy="9" r="7"></circle>
+                        <path fill="none" stroke="#000" stroke-width="1.1" d="M14,14 L18,18 L14,14 Z"></path>
+                    </svg></a>
+                </div>
+                <div class="uk-navbar-left uk-flex-1 test-overlay" aria-hidden="true" wfd-invisible="true" hidden="">
+                    <div class="uk-navbar-item uk-width-expand">
+                        <form class="uk-search uk-search-navbar uk-width-1-1">
+                            <input class="uk-search-input" type="search" placeholder="Поиск..." autofocus="">
+                        </form>
+                    </div>
+                    <a class="uk-navbar-toggle uk-close uk-icon" uk-close="" uk-toggle="target: .test-overlay; animation: uk-animation-fade" href="#"><svg width="14"
+                        height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg" data-svg="close-icon">
+                        <line fill="none" stroke="#000" stroke-width="1.1" x1="1" y1="1" x2="13" y2="13"></line>
+                        <line fill="none" stroke="#000" stroke-width="1.1" x1="13" y1="1" x2="1" y2="13"></line>
+                    </svg></a>
+                </div>
+            </nav>
+            </div>
+            </div>
+
+</header>
+<header id="headone">
+    <div style="  background-color:rgba(128, 128, 128, 0);" class="headone uk-navbar-container  uk-visible@m tm-toolbar-container">
+        <div class="uk-container uk-navbar" uk-navbar="">
+            <div class="uk-navbar-left">
+                <nav>
+                    <nav style="  background-color:rgba(128, 128, 128, 0);" class="uk-navbar-container" uk-navbar>
+                        <div style="  background-color:rgba(128, 128, 128, 0);" class="uk-navbar-left">
+
+                            <ul class="uk-navbar-nav">
+                                <li class="uk-active"><a style=" margin-left: 9px;" href="index.html">Главная страница</a></li>
+                                <li><a href="burger.html">Бургер</a></li>
+                                <li><a href="#">Пицца</a></li>
+                                <li><a href="#">Напитки</a></li>
+                                <li><a href="#">Закуска</a></li>
+                                <li><a href="#">Суши</a></li>
+                                <li><a href="#">Десерты</a></li>
+                            </ul>
+
+                        </div>
+                    </nav>
+                </nav>
+            </div>
+            <div class="uk-navbar-right">
+                <nav>
+                    <ul class="uk-navbar-nav">
+                        <li>
+                            <div class="textclr" class="uk-navbar-item"><span class=" uk-margin-xsmall-right uk-icon" uk-icon="icon: clock; ratio: .75;"><svg class="clock"width="15" height="15" viewBox="0 0 20 20"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <circle fill="none" stroke="#000" stroke-width="1.1" cx="10" cy="10" r="9">
+                                        </circle>
+                                        <rect x="9" y="4" width="1" height="7"></rect>
+                                        <path fill="none" stroke="#000" stroke-width="1.1"
+                                            d="M13.018,14.197 L9.445,10.625">
+                                        </path>
+                                    </svg>
+                                </span >Ежеденевно с 10:00–22:00</div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- мобильное меню -->
+<header id="mobile" class="uk-hidden@m ">
+    <div id="modal-full" class="uk-section uk-padding-remove-vertical">
+        <div class="containereset" class="uk-container">
+            <div class="uk-margin-remove-left  ">
+                <div uk-sticky="sel-target: .uk-navbar-container;  cls-active: uk-navbar-sticky; ">
+                    <!-- навигация -->
+
+                    <nav id="head" class="uk-navbar-container uk-navbar-transparent uk-light" data-uk-navbar="dropbar: false;" data-uk-sticky="animation: uk-animation-slide-top;
+                                    sel-target: .uk-navbar-container;
+                                    cls-active: uk-navbar-sticky;
+                                    cls-inactive: uk-navbar-transparent uk-light; top: 0">
+                        <!-- LEFT -->
+                        <div class="uk-navbar-left">
+                            <a href="/">
+                                <img class="imglogomb" src="icon/logo.png" max-width="60%" alt="Logo" uk-img>
+                            </a>
+                            <!--  960px -->
+                            <ul class="uk-navbar-nav uk-visible@m">
+                                <li class="uk-active"><a href="#">Active</a></li>
+                                <li>
+                                    <a href="#">Parent</a>
+                                    <div class="uk-navbar-dropdown">
+                                        <ul class="uk-nav uk-navbar-dropdown-nav">
+                                            <li class="uk-active"><a href="#">Active</a></li>
+                                            <li><a href="#modal-center_">Item</a></li>
+                                            <li><a href="#">Item</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li><a href="#">Item</a></li>
+                                <li>
+                                    <a href="#">
+                                        <span class="uk-icon uk-margin-small-right" uk-icon="icon: star"></span> Features
+                                </a>
+                        </li>
+                    </ul>
+                    </div>
+                    <!--мобильная кнопка бургера -->
+
+                    <a class="uk-navbar-toggle uk-hidden@m uk-navbar-right" href="#" data-uk-toggle="target: #offcanvas-nav-primary">
+
+                        <span class="burger" uk-navbar-toggle-icon></span> <span class="uk-margin-small-left"></span>
+                    </a>
+            </div>
+            </nav>
+        </div>
+        <nav id="offcanvas-nav-primary" data-uk-offcanvas="overlay: true; mode: push; flip: true">
+
+            <!--выдвижное меню  -->
+
+            <div class="uk-offcanvas-bar uk-flex uk-flex-column">
+                <!-- navbar content her -->
+                <button data-uk-toggle="target: #offcanvas-nav-primary" class="uk-alert-close" type="button" uk-close></button>
+                <!-- A - logo -->
+                <a class="uk-align-left uk-logo" href="#">МЕНЮ</a>
+                <!-- B - nav -->
+                <ul class="uk-nav-default uk-nav-parent-icon" uk-nav>
+                    <li class="uk-parent">
+                        <a href="#">Корзина и карта</a>
+                        <ul class="uk-nav-sub">
+                            <li>
+
+                                <a uk-toggle href="#modal-center_"> <span uk-icon="icon: cart"></span>Корзина <span class="cirkmob uk-badge">2</span></a>
+
+                            </li>
+                            <li><a uk-toggle href="#modal-example"><span uk-icon="icon: location"></span> Адрес</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class=""><a href="#">Меню</a></li>
+                    <li class=""><a href="#">Акции</a></li>
+                    <li class=""><a href="#">Рестораны</a></li>
+                    <li class=""><a href="#">О нас</a></li>
+                    <li style="list-style: none;     /* margin: 4px; */margin-top: 6px;margin-left: -7px;">
+                        <a uk-toggle="target: #modal-log" id="modal-log" uk-tooltip="title: Аккаунт; pos: bottom-center" title="sign-in" href="" class="uk-icon-button uk-margin-small-right" uk-icon="sign-in"></a>
+                    </li>
+                </ul>
+                <!--C- contact us -->
+                <footer class="uk-margin-large-top">
+                    <hr>
+                    <span uk-icon="icon: phone"></span>
+                    <a class="uk-link-text" href="#">880005553535</a>
+
+                    <div style="
+                        margin-left: 4px;" class="uk-margin-top">
+                        <span class="uk-margin-xsmall-right uk-icon" uk-icon="icon: clock; ratio: .75;"><svg  width="20" height="20" viewBox="0 0 20 20"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <circle  fill="none" stroke="#000" stroke-width="1.1" cx="10" cy="10" r="9">
+                                </circle>
+                                <rect x="9" y="4" width="1" height="7"></rect>
+                                <path fill="none" stroke="#000" stroke-width="1.1"
+                                    d="M13.018,14.197 L9.445,10.625">
+                                </path>
+                            </svg>
+                        </span >
+                        Ежеденевно с 10:00–22:00
+                    </div>
+                    </footer>
+                </div>
+                
+            </nav>
+            <div>
+</div>
+            </nav>
+            
+</header>
+
+<div  id="modal-center_" uk-modal>
+    <div class="uk-card" style="    background-color: white; max-width: 100vh;  height: 100vh;" >
+        <div class="  uk-flex uk-flex-column tm-shadow-remove">
+            <header class="uk-card-header uk-flex uk-flex-middle">
+                <div class="uk-grid-small uk-flex-1 uk-grid" uk-grid="">
+                    <div class="uk-width-expand uk-first-column">
+                        <div class="uk-h3">Корзина</div>
+                    </div><button uk-toggle href="#modal-center_" class="uk-offcanvas-close uk-close uk-icon" type="button" uk-close=""><svg width="14"
+                            height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
+                            <line fill="none" stroke="#000" stroke-width="1.1" x1="1" y1="1" x2="13" y2="13"></line>
+                            <line fill="none" stroke="#000" stroke-width="1.1" x1="13" y1="1" x2="1" y2="13"></line>
+                        </svg></button>
+                </div>
+            </header>
+            <div class="uk-card-body uk-overflow-auto">
+                <ul class="uk-list uk-list-divider">
+                    <li class="uk-visible-toggle">
+                        <arttcle>
+                            <div class="uk-grid-small uk-grid" uk-grid="">
+                                <div class="uk-width-1-5 uk-first-column">
+                                    <div class="tm-ratio tm-ratio-1-3">
+                                        <a class="tm-media-box" style="width:10px;" href="product.html">
+                                            <figure class="tm-media-box-wrap"><img width="60" height="60" class="uk-border-circle" src="images/edward-guk-357344-unsplash.jpg" alt="Бургер"></figure>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="uk-width-expand">
+                                    <div class="uk-text-meta uk-text-xsmall">Бургер</div>
+                                    <div class="uk-margin-xsmall uk-grid-small uk-flex-middle uk-grid cartbrg" uk-grid="">
+                                        <div class="uk-text-bolder uk-text-small uk-first-column ">6 999 р</div>
+                                        <div class="uk-text-meta uk-text-xsmall">1 × 6 999 р</div>
+                                        <div class="order-form__age">
+                                            <p class="order-form__age_item">
+                                                <span class="order-form__age_minus"><img src="https://i.ibb.co/MP1M5Rk/minus.png" alt="-"></span>
+                        <input id="adult" type="text" placeholder="0">
+                        <span class="order-form__age_plus"><img src="https://i.ibb.co/cg2hBM6/plus.png" alt="+"></span>
+                        </p>
+                    </div>
+                    <div>
+                        <a class="uk-icon-link uk-text-danger  uk-icon" href="#" uk-icon="icon: trash; ratio: 1" uk-tooltip="Remove" title="" aria-expanded="false">
+                            <path fill="none" stroke="#000" stroke-width="1.06" d="M16,16 L4,4"></path>
+                            <path fill="none" stroke="#000" stroke-width="1.06" d="M16,4 L4,16"></path>
+                            </svg>
+                        </a>
+                    </div>
+            </div>
+    </div>
+
+    </div>
+    </arttcle>
+    </li>
+
+    </ul>
+    <ul class="uk-list uk-list-divider">
+        <li class="uk-visible-toggle">
+            <arttcle>
+                <div class="uk-grid-small uk-grid" uk-grid="">
+                    <div class="uk-width-1-5 uk-first-column">
+                        <div class="tm-ratio tm-ratio-1-3">
+                            <a class="tm-media-box" style="width:10px;" href="product.html">
+                                <figure class="tm-media-box-wrap"><img width="60" height="60" class="uk-border-circle" src="images/edward-guk-357344-unsplash.jpg" alt="Бургер"></figure>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="uk-width-expand">
+                        <div class="uk-text-meta uk-text-xsmall">Бургер</div>
+                        <div class="uk-margin-xsmall uk-grid-small uk-flex-middle uk-grid cartbrg" uk-grid="">
+                            <div class="uk-text-bolder uk-text-small uk-first-column ">6 999 р</div>
+                            <div class="uk-text-meta uk-text-xsmall">1 × 6 999 р</div>
+                            <div class="order-form__age">
+                                <p class="order-form__age_item">
+                                    <span class="order-form__age_minus"><img src="https://i.ibb.co/MP1M5Rk/minus.png" alt="-"></span>
+                                    <input id="adult" type="text" placeholder="0">
+                                    <span class="order-form__age_plus"><img src="https://i.ibb.co/cg2hBM6/plus.png" alt="+"></span>
+                                </p>
+                            </div>
+                            <div>
+                                <a class="uk-icon-link uk-text-danger  uk-icon" href="#" uk-icon="icon: trash; ratio: 1" uk-tooltip="Remove" title="" aria-expanded="false">
+                                    <path fill="none" stroke="#000" stroke-width="1.06" d="M16,16 L4,4"></path>
+                                    <path fill="none" stroke="#000" stroke-width="1.06" d="M16,4 L4,16"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </arttcle>
+        </li>
+
+    </ul>
+
+    </div>
+
+    <footer class="uk-card-footer">
+        <div class="uk-grid-small uk-grid" uk-grid="">
+
+        </div>
+        <div class="uk-grid-small uk-child-width-1-1 uk-child-width-1-2@m uk-margin-small uk-grid" uk-grid="">
+            <div class="uk-inline"><input style="width: 150px; border-radius:10px;" class="uk-input uk-form-width-small" placeholder="Промо-код" type="text"></div>
+
+            <div class=""><label for="dialog_state" style=" width: 80%; margin-bottom: 10px; margin-top:100px; border-radius:10px; margin-left: -2%;" class="uk-position-bottom-center uk-button uk-button-primary uk-width-1-1 cartbtn" href="checkout.html">Оформить заказ на сумму 680Р</label></div>
+
+        </div>
+    </footer>
+
+    </div>
+
+    </div>
+
+    </div>
+
+    <!-- контент -->
+    <main id="main">
+        <div style="max-width: 1400px; margin: auto; margin-top: 20px;">
+            <div class=" uk-flex uk-flex-inline uk-padding-large@s uk-margin-auto" uk-grid>
+
+
+                <div class="uk-grid uk-width-2-3@m  uk-child-width-5-7@s uk-flex-first">
+                    <h2 class="uk-card uk-card-header" style=" font-size: 300%">Скидки на суши и роллы</h2>
+                    <p style="text-align: left; margin:0px 5% 0px 0% ;">Представляем вашему вниманию летние суши и роллы! Как гласит японская мудрость, вкус можно не только распробовать, но и рассмотреть. Глаза рисуют форму, а уста подтверждают увиденное. Изящное исполнение делает вкус более утончённым,
+                        лёгким и подчёркивает всё лучшее. Предлагаем вам проверить это высказывание и попробовать новинки этого лета со скидкой!</p>
+                </div>
+                <div class="uk-width-1-4@m  uk-child-width-1-1@s  uk-card uk-card-default uk-card-body  ns-border-r-product uk-margin-auto-top">
+                    <div style="text-align: center;">
+                        <a href="" uk-icon="icon: link; ratio: 2" style="text-decoration: none;"></a>
+                        <a href="" uk-icon="icon: instagram; ratio: 2" style="text-decoration: none;">&nbsp; </a>
+                        <a href="" uk-icon="icon: facebook; ratio: 2" style="text-decoration: none;">&nbsp; </a>
+                        <a href="" uk-icon="icon: twitter; ratio: 2" style="text-decoration: none;">&nbsp; </a>
+                    </div>
+                </div>
+            </div>
+
+            <ul class="js-filter  uk-grid-column-small uk-grid-row-large uk-child-width-1-4@l  uk-child-width-1-3@m  uk-child-width-1-2@s   uk-text-center uk-margin-bottom" uk-grid>
+                <li data-color="action">
+                    <div class="sushi ns-border-r-product">
+                        <div class="uk-card uk-card-default ns-border-r-product">
+                            <div class="uk-card-media-top">
+                                <div class="uk-text-center">
+                                    <div class="uk-inline-clip uk-transition-toggle  ns-border-r-product" tabindex="0">
+                                        <img class="uk-transition-scale-up uk-transition-opaque" data-src="images/5eff91b330b241c013aed7a8cebb529e.png" data-height="667" alt="UIkit cards" uk-img="">
+                                        <div class="uk-position-center">
+                                            <span class="uk-transition-fade" uk-icon="icon: plus; ratio: 2"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="uk-card-badge uk-label">Новинка</div>
+                            </div>
+                            <div class="grouptext uk-card-body" style="text-align: left;">
+                                <h1>Суши, роллы, вок</h1>
+                                <p>Томатный соус, моцарелла, томаты, колбаски из баранины... </p>
+                            </div>
+                            <div style="margin-bottom: 20px;">
+
+                                <span class="old-price">
+      
+                                <span >420</span>
+                                </span>
+                                <span>₽</span>
+                                <span class="current-price"><span itemprop="price">300</span><span class="currency">₽</span>
+
+                                </span>
+                                <span class="weight"><span>200</span><span> гр.</span></span>
+
+                            </div>
+
+
+                            <div class="uk-card-footer" style="margin-top: -30px;">
+                                <div class="">
+
+                                    <a class="uk-section uk-section-default uk-padding-remove uk-button uk-button-default" href="product.html">Изменить состав</a>
+                                    <button class=" uk-button uk-text-center btncart btn-1" style=" width: 100%; margin-top: 10px;">
+                            <a class="uk-button  "> <span uk-icon="icon: cart;">Купить</a>
+                        </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li data-color="action">
+                    <div class="sushi ns-border-r-product">
+                        <div class="uk-card uk-card-default ns-border-r-product">
+                            <div class="uk-card-media-top">
+                                <div class="uk-text-center">
+                                    <div class="uk-inline-clip uk-transition-toggle  ns-border-r-product" tabindex="0">
+                                        <img class="uk-transition-scale-up uk-transition-opaque" data-src="images/5eff91b330b241c013aed7a8cebb529e.png" data-height="667" alt="UIkit cards" uk-img="">
+                                        <div class="uk-position-center">
+                                            <span class="uk-transition-fade" uk-icon="icon: plus; ratio: 2"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="uk-card-badge uk-label">Новинка</div>
+                            </div>
+                            <div class="grouptext uk-card-body" style="text-align: left;">
+                                <h1>Суши, роллы, вок</h1>
+                                <p>Томатный соус, моцарелла, томаты, колбаски из баранины... </p>
+                            </div>
+                            <div style="margin-bottom: 20px;">
+
+                                <span class="old-price">
+      
+                                <span >420</span>
+                                </span>
+                                <span>₽</span>
+                                <span class="current-price"><span itemprop="price">300</span><span class="currency">₽</span>
+
+                                </span>
+                                <span class="weight"><span>200</span><span> гр.</span></span>
+
+                            </div>
+
+
+                            <div class="uk-card-footer" style="margin-top: -30px;">
+                                <div class="">
+
+                                    <a class="uk-section uk-section-default uk-padding-remove uk-button uk-button-default" href="product.html">Изменить состав</a>
+                                    <button class=" uk-button uk-text-center btncart btn-1" style=" width: 100%; margin-top: 10px;">
+                            <a class="uk-button  "> <span uk-icon="icon: cart;">Купить</a>
+                        </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li data-color="action">
+                    <div class="sushi ns-border-r-product">
+                        <div class="uk-card uk-card-default ns-border-r-product">
+                            <div class="uk-card-media-top">
+                                <div class="uk-text-center">
+                                    <div class="uk-inline-clip uk-transition-toggle  ns-border-r-product" tabindex="0">
+                                        <img class="uk-transition-scale-up uk-transition-opaque" data-src="images/5eff91b330b241c013aed7a8cebb529e.png" data-height="667" alt="UIkit cards" uk-img="">
+                                        <div class="uk-position-center">
+                                            <span class="uk-transition-fade" uk-icon="icon: plus; ratio: 2"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="uk-card-badge uk-label">Новинка</div>
+                            </div>
+                            <div class="grouptext uk-card-body" style="text-align: left;">
+                                <h1>Суши, роллы, вок</h1>
+                                <p>Томатный соус, моцарелла, томаты, колбаски из баранины... </p>
+                            </div>
+                            <div style="margin-bottom: 20px;">
+
+                                <span class="old-price">
+      
+                                <span >420</span>
+                                </span>
+                                <span>₽</span>
+                                <span class="current-price"><span itemprop="price">300</span><span class="currency">₽</span>
+
+                                </span>
+                                <span class="weight"><span>200</span><span> гр.</span></span>
+
+                            </div>
+
+
+                            <div class="uk-card-footer" style="margin-top: -30px;">
+                                <div class="">
+
+                                    <a class="uk-section uk-section-default uk-padding-remove uk-button uk-button-default" href="product.html">Изменить состав</a>
+                                    <button class=" uk-button uk-text-center btncart btn-1" style=" width: 100%; margin-top: 10px;">
+                            <a class="uk-button  "> <span uk-icon="icon: cart;">Купить</a>
+                        </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li data-color="action">
+                    <div class="sushi ns-border-r-product">
+                        <div class="uk-card uk-card-default ns-border-r-product">
+                            <div class="uk-card-media-top">
+                                <div class="uk-text-center">
+                                    <div class="uk-inline-clip uk-transition-toggle  ns-border-r-product" tabindex="0">
+                                        <img class="uk-transition-scale-up uk-transition-opaque" data-src="images/5eff91b330b241c013aed7a8cebb529e.png" data-height="667" alt="UIkit cards" uk-img="">
+                                        <div class="uk-position-center">
+                                            <span class="uk-transition-fade" uk-icon="icon: plus; ratio: 2"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="uk-card-badge uk-label">Новинка</div>
+                            </div>
+                            <div class="grouptext uk-card-body" style="text-align: left;">
+                                <h1>Суши, роллы, вок</h1>
+                                <p>Томатный соус, моцарелла, томаты, колбаски из баранины... </p>
+                            </div>
+                            <div style="margin-bottom: 20px;">
+
+                                <span class="old-price">
+      
+                                <span >420</span>
+                                </span>
+                                <span>₽</span>
+                                <span class="current-price"><span itemprop="price">300</span><span class="currency">₽</span>
+
+                                </span>
+                                <span class="weight"><span>200</span><span> гр.</span></span>
+
+                            </div>
+
+
+                            <div class="uk-card-footer" style="margin-top: -30px;">
+                                <div class="">
+
+                                    <a class="uk-section uk-section-default uk-padding-remove uk-button uk-button-default" href="product.html">Изменить состав</a>
+                                    <button class=" uk-button uk-text-center btncart btn-1" style=" width: 100%; margin-top: 10px;">
+                            <a class="uk-button  "> <span uk-icon="icon: cart;">Купить</a>
+                        </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li data-color="action">
+                    <div class="sushi ns-border-r-product">
+                        <div class="uk-card uk-card-default ns-border-r-product">
+                            <div class="uk-card-media-top">
+                                <div class="uk-text-center">
+                                    <div class="uk-inline-clip uk-transition-toggle  ns-border-r-product" tabindex="0">
+                                        <img class="uk-transition-scale-up uk-transition-opaque" data-src="images/5eff91b330b241c013aed7a8cebb529e.png" data-height="667" alt="UIkit cards" uk-img="">
+                                        <div class="uk-position-center">
+                                            <span class="uk-transition-fade" uk-icon="icon: plus; ratio: 2"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="uk-card-badge uk-label">Новинка</div>
+                            </div>
+                            <div class="grouptext uk-card-body" style="text-align: left;">
+                                <h1>Суши, роллы, вок</h1>
+                                <p>Томатный соус, моцарелла, томаты, колбаски из баранины... </p>
+                            </div>
+                            <div style="margin-bottom: 20px;">
+
+                                <span class="old-price">
+      
+                                <span >420</span>
+                                </span>
+                                <span>₽</span>
+                                <span class="current-price"><span itemprop="price">300</span><span class="currency">₽</span>
+
+                                </span>
+                                <span class="weight"><span>200</span><span> гр.</span></span>
+
+                            </div>
+
+
+                            <div class="uk-card-footer" style="margin-top: -30px;">
+                                <div class="">
+
+                                    <a class="uk-section uk-section-default uk-padding-remove uk-button uk-button-default" href="product.html">Изменить состав</a>
+                                    <button class=" uk-button uk-text-center btncart btn-1" style=" width: 100%; margin-top: 10px;">
+                            <a class="uk-button  "> <span uk-icon="icon: cart;">Купить</a>
+                        </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li data-color="action">
+                    <div class="sushi ns-border-r-product">
+                        <div class="uk-card uk-card-default ns-border-r-product">
+                            <div class="uk-card-media-top">
+                                <div class="uk-text-center">
+                                    <div class="uk-inline-clip uk-transition-toggle  ns-border-r-product" tabindex="0">
+                                        <img class="uk-transition-scale-up uk-transition-opaque" data-src="images/5eff91b330b241c013aed7a8cebb529e.png" data-height="667" alt="UIkit cards" uk-img="">
+                                        <div class="uk-position-center">
+                                            <span class="uk-transition-fade" uk-icon="icon: plus; ratio: 2"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="uk-card-badge uk-label">Новинка</div>
+                            </div>
+                            <div class="grouptext uk-card-body" style="text-align: left;">
+                                <h1>Суши, роллы, вок</h1>
+                                <p>Томатный соус, моцарелла, томаты, колбаски из баранины... </p>
+                            </div>
+                            <div style="margin-bottom: 20px;">
+
+                                <span class="old-price">
+      
+                                <span >420</span>
+                                </span>
+                                <span>₽</span>
+                                <span class="current-price"><span itemprop="price">300</span><span class="currency">₽</span>
+
+                                </span>
+                                <span class="weight"><span>200</span><span> гр.</span></span>
+
+                            </div>
+
+
+                            <div class="uk-card-footer" style="margin-top: -30px;">
+                                <div class="">
+
+                                    <a class="uk-section uk-section-default uk-padding-remove uk-button uk-button-default" href="product.html">Изменить состав</a>
+                                    <button class=" uk-button uk-text-center btncart btn-1" style=" width: 100%; margin-top: 10px;">
+                            <a class="uk-button  "> <span uk-icon="icon: cart;">Купить</a>
+                        </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div class=" " uk-filter="target: .js-filter" style="max-width: 1200px; margin: auto;top: 0; left: 0px; bottom: 0; right: 0;">
+    <div class="tabsing uk-section  " style="margin-bottom: -1px; padding-top: 0px;padding-bottom: 0px;">
+        <div class="uk-container">
+            <ul class="uk-subnav uk-subnav-pill ">
+                <li class="tbf uk-active ns-subnav-checkout-hover uk-width-1-4 uk-padding-remove" uk-filter-control="[data-color='tab1']" title="Оплата">
+                    <a class="tbf " href="#"><br><span class="textbot">Оплата</span></a>
+                </li>
+                <li class="tbf  ns-subnav-checkout-hover uk-width-1-4 uk-padding-remove " uk-filter-control="[data-color='tab2']" title="Оплата">
+                    <a class="tbf" href="#"><br><span class="textbot">Упаковка</span></a>
+                </li>
+                <li class="tbf  ns-subnav-checkout-hover uk-width-1-4 uk-padding-remove" uk-filter-control="[data-color='tab3']" title="Оплата">
+                    <a class="tbf" href="#"><br><span class="textbot">Доставка</span></a>
+                </li>
+                <li class="tbf  ns-subnav-checkout-hover uk-width-1-4 uk-padding-remove" uk-filter-control="[data-color='tab4']" title="Оплата"><a class="tbf tabsung" href="#"><span class="textbot">О нас</span></a></li>
+                <!--еще что то  -->
+
+            </ul>
+        </div>
+    </div>
+    <!-- class="   uk-child-width-1-2 uk-child-width-1-3@m "  -->
+    <ul class="uk-child-width-3-2@s   tabcheck js-filter     uk-margin-bottom" uk-grid style="padding-right: 40px;    border-radius: 20px; background-color: #f3f3f3; ">
+        <div class="uk-section  " style="margin-bottom: -1px; padding-top: 0px;padding-bottom: 0px;">
+            <div class="uk-container">
+                <ul class="uk-subnav uk-subnav-pill ">
+                    <li class="tbf uk-active ns-subnav-checkout-hover" uk-filter-control="[data-color='tab1']" title="Оплата"><a class="tbf" href="#"><svg class="uk-visible@m" viewBox="0 0 24 24"><path d="M14,2A8,8 0 0,0 6,10A8,8 0 0,0 14,18A8,8 0 0,0 22,10H20C20,13.32 17.32,16 14,16A6,6 0 0,1 8,10A6,6 0 0,1 14,4C14.43,4 14.86,4.05 15.27,4.14L16.88,2.54C15.96,2.18 15,2 14,2M20.59,3.58L14,10.17L11.62,7.79L10.21,9.21L14,13L22,5M4.93,5.82C3.08,7.34 2,9.61 2,12A8,8 0 0,0 10,20C10.64,20 11.27,19.92 11.88,19.77C10.12,19.38 8.5,18.5 7.17,17.29C5.22,16.25 4,14.21 4,12C4,11.7 4.03,11.41 4.07,11.11C4.03,10.74 4,10.37 4,10C4,8.56 4.32,7.13 4.93,5.82Z"/>
+                    </svg><br><span style="width: 47vh;" ></span></a></li>
+                    <li class=" ns-subnav-checkout-hover" uk-filter-control="[data-color='tab2']" title="Оплата"><a class="tbf" href="#"><svg class="uk-visible@m" viewBox="0 0 24 24"><path d="M2,10.96C1.5,10.68 1.35,10.07 1.63,9.59L3.13,7C3.24,6.8 3.41,6.66 3.6,6.58L11.43,2.18C11.59,2.06 11.79,2 12,2C12.21,2 12.41,2.06 12.57,2.18L20.47,6.62C20.66,6.72 20.82,6.88 20.91,7.08L22.36,9.6C22.64,10.08 22.47,10.69 22,10.96L21,11.54V16.5C21,16.88 20.79,17.21 20.47,17.38L12.57,21.82C12.41,21.94 12.21,22 12,22C11.79,22 11.59,21.94 11.43,21.82L3.53,17.38C3.21,17.21 3,16.88 3,16.5V10.96C2.7,11.13 2.32,11.14 2,10.96M12,4.15V4.15L12,10.85V10.85L17.96,7.5L12,4.15M5,15.91L11,19.29V12.58L5,9.21V15.91M19,15.91V12.69L14,15.59C13.67,15.77 13.3,15.76 13,15.6V19.29L19,15.91M13.85,13.36L20.13,9.73L19.55,8.72L13.27,12.35L13.85,13.36Z" />
+                    </svg><br><span></span></a></li>
+                    <li class=" ns-subnav-checkout-hover" uk-filter-control="[data-color='tab3']" title="Оплата"><a class="tbf" href="#"><svg class="uk-visible@m" viewBox="0 0 24 24"><path d="M3,4A2,2 0 0,0 1,6V17H3A3,3 0 0,0 6,20A3,3 0 0,0 9,17H15A3,3 0 0,0 18,20A3,3 0 0,0 21,17H23V12L20,8H17V4M10,6L14,10L10,14V11H4V9H10M17,9.5H19.5L21.47,12H17M6,15.5A1.5,1.5 0 0,1 7.5,17A1.5,1.5 0 0,1 6,18.5A1.5,1.5 0 0,1 4.5,17A1.5,1.5 0 0,1 6,15.5M18,15.5A1.5,1.5 0 0,1 19.5,17A1.5,1.5 0 0,1 18,18.5A1.5,1.5 0 0,1 16.5,17A1.5,1.5 0 0,1 18,15.5Z" />
+                    </svg><br><span ></span></a></li>
+                    <li class=" ns-subnav-checkout-hover" uk-filter-control="[data-color='tab4']" title="Оплата"><a class="tbf" href="#"><svg class="uk-visible@m" viewBox="0 0 24 24"><path  d="M11,9H13V7H11M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M11,17H13V11H11V17Z" />
+                    </svg><span style="width: 47vh;"></span></a></li>
+                    <!--еще что то  -->
+
+                </ul>
+            </div>
+        </div>
+        <li data-color="tab1">
+
+            <h3 style="padding-left: 45px;"></h3>
+            <div class="uk-flex">
+                <svg class="icontab" viewBox="0 0 24 24">
+                    <path d="M14,2A8,8 0 0,0 6,10A8,8 0 0,0 14,18A8,8 0 0,0 22,10H20C20,13.32 17.32,16 14,16A6,6 0 0,1 8,10A6,6 0 0,1 14,4C14.43,4 14.86,4.05 15.27,4.14L16.88,2.54C15.96,2.18 15,2 14,2M20.59,3.58L14,10.17L11.62,7.79L10.21,9.21L14,13L22,5M4.93,5.82C3.08,7.34 2,9.61 2,12A8,8 0 0,0 10,20C10.64,20 11.27,19.92 11.88,19.77C10.12,19.38 8.5,18.5 7.17,17.29C5.22,16.25 4,14.21 4,12C4,11.7 4.03,11.41 4.07,11.11C4.03,10.74 4,10.37 4,10C4,8.56 4.32,7.13 4.93,5.82Z"/>
+                </svg>
+                <div class="tabswrite" style="width: 70%;">
+                    <p>
+                        <div style="font-weight: bold;">465&nbsp;₽ Минимальная сумма доставки без учета сувениров</div>
+                        <div>7&nbsp;000&nbsp;₽ Максимальная сумма при оплате наличными Изображения продуктов могут отличаться от&nbsp;продуктов в&nbsp;заказе.</div>
+                    </p>
+                    <p>
+                        <div style="font-weight: bold;">Доставка курьерской службой</div>
+                        <div>Наш курьер доставит заказ по указанному адресу с 10:00 до 21:00. После предварительного звонка оператора курьер дополнительно свяжется для предупреждения о выезде по адресу доставки (ориентировочно за 1 час). Стоимость доставки
+                            200 руб. при сумме заказа менее 2000 руб. При сумме заказа более 2000 руб. доставка осуществляется бесплатно. Мы можем предложить доставку в день заказа или в любой последующий день с 10:00 до 21:00. Срочная доставка может
+                            быть осуществлена в любое удобное время в интервале 1 час, но не ранее, чем через 3 часа после оформления заказа. В случае опоздания курьера - доставка за наш счет!</div>
+                    </p>
+                </div>
+            </div>
+
+            <!-- /.uk-section -->
+        </li>
+
+
+        <li data-color="tab2">
+            <h3 style="
+                padding-left: 13px;"></h3>
+            <div class="uk-flex">
+                <svg class="icontab" viewBox="0 0 24 24"><path d="M2,10.96C1.5,10.68 1.35,10.07 1.63,9.59L3.13,7C3.24,6.8 3.41,6.66 3.6,6.58L11.43,2.18C11.59,2.06 11.79,2 12,2C12.21,2 12.41,2.06 12.57,2.18L20.47,6.62C20.66,6.72 20.82,6.88 20.91,7.08L22.36,9.6C22.64,10.08 22.47,10.69 22,10.96L21,11.54V16.5C21,16.88 20.79,17.21 20.47,17.38L12.57,21.82C12.41,21.94 12.21,22 12,22C11.79,22 11.59,21.94 11.43,21.82L3.53,17.38C3.21,17.21 3,16.88 3,16.5V10.96C2.7,11.13 2.32,11.14 2,10.96M12,4.15V4.15L12,10.85V10.85L17.96,7.5L12,4.15M5,15.91L11,19.29V12.58L5,9.21V15.91M19,15.91V12.69L14,15.59C13.67,15.77 13.3,15.76 13,15.6V19.29L19,15.91M13.85,13.36L20.13,9.73L19.55,8.72L13.27,12.35L13.85,13.36Z" />
+                  </svg>
+                <div class="tabswrite" style="width: 70%;">
+                    <p>
+                        <div style="font-weight: bold;">Просто текст</div>
+                        <div>7&nbsp;000&nbsp;₽ Максимальная сумма при оплате наличными Изображения продуктов могут отличаться от&nbsp;продуктов в&nbsp;заказе.</div>
+                    </p>
+                    <p>
+                        <div style="font-weight: bold;">Доставка курьерской службой</div>
+                        <div>Наш курьер доставит заказ по указанному адресу с 10:00 до 21:00. После предварительного звонка оператора курьер дополнительно свяжется для предупреждения о выезде по адресу доставки (ориентировочно за 1 час). Стоимость доставки
+                            200 руб. при сумме заказа менее 2000 руб. При сумме заказа более 2000 руб. доставка осуществляется бесплатно. Мы можем предложить доставку в день заказа или в любой последующий день с 10:00 до 21:00. Срочная доставка может
+                            быть осуществлена в любое удобное время в интервале 1 час, но не ранее, чем через 3 часа после оформления заказа. В случае опоздания курьера - доставка за наш счет!</div>
+                    </p>
+                </div>
+
+            </div>
+
+
+
+            <!-- /.uk-section -->
+        </li>
+        <li data-color="tab3">
+            <h3 style="
+                padding-left: 23px;"></h3>
+            <div class="uk-flex">
+                <svg class="icontab" viewBox="0 0 24 24"><path d="M3,4A2,2 0 0,0 1,6V17H3A3,3 0 0,0 6,20A3,3 0 0,0 9,17H15A3,3 0 0,0 18,20A3,3 0 0,0 21,17H23V12L20,8H17V4M10,6L14,10L10,14V11H4V9H10M17,9.5H19.5L21.47,12H17M6,15.5A1.5,1.5 0 0,1 7.5,17A1.5,1.5 0 0,1 6,18.5A1.5,1.5 0 0,1 4.5,17A1.5,1.5 0 0,1 6,15.5M18,15.5A1.5,1.5 0 0,1 19.5,17A1.5,1.5 0 0,1 18,18.5A1.5,1.5 0 0,1 16.5,17A1.5,1.5 0 0,1 18,15.5Z" />
+                  </svg>
+                <div class="tabswrite" style="width: 70%;">
+                    <h3>60 МИНУТ ИЛИ ПИЦЦА БЕСПЛАТНО</h3>
+                    <p>
+                        <div style="font-weight: bold;">Доставка курьерской службой</div>
+                        <div>Наш курьер доставит заказ по указанному адресу с 10:00 до 21:00. После предварительного звонка оператора курьер дополнительно свяжется для предупреждения о выезде по адресу доставки (ориентировочно за 1 час). Стоимость доставки
+                            200 руб. при сумме заказа менее 2000 руб. При сумме заказа более 2000 руб. доставка осуществляется бесплатно. Мы можем предложить доставку в день заказа или в любой последующий день с 10:00 до 21:00. Срочная доставка может
+                            быть осуществлена в любое удобное время в интервале 1 час, но не ранее, чем через 3 часа после оформления заказа. В случае опоздания курьера - доставка за наш счет!</div>
+                    </p>
+                </div>
+            </div>
+
+
+            <!-- /.uk-section -->
+        </li>
+        <li data-color="tab4">
+            <h3 style="
+                padding-left: 46px;"></h3>
+            <div class="uk-flex">
+                <svg class="icontab" viewBox="0 0 24 24"><path  d="M11,9H13V7H11M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M11,17H13V11H11V17Z" />
+                  </svg>
+                <div class="tabswrite">
+                    <h3>ДОДО ПИЦЦА — СЕТЬ ПИЦЦЕРИЙ № 1 В РОССИИ</h3>
+                    <p> По&nbsp;доставке пиццы по&nbsp;данным из&nbsp;отчета Euromonitor International на&nbsp;май 2017&nbsp;года. Все цены в&nbsp;меню указаны без учета скидок.</p>
+                </div>
+
+            </div>
+
+
+            <!-- /.uk-section -->
+        </li>
+
+    </ul>
+
+</div>
+        </div>
+
+        </div>
+
+    </main>
+
+
+    <div id="cookie_notification">
+    <p>Для улучшения работы сайта и его взаимодействия с пользователями мы используем файлы cookie. Продолжая работу с сайтом, Вы разрешаете использование cookie-файлов. <br>Вы всегда можете отключить файлы cookie в настройках Вашего браузера.</p>
+    <button class="button cookie_accept">Принять</button>
+    </div>
+<section class="footer  uk-section uk-section-secondary uk-section-small ">
+    <div class="uk-container">
+        <div class="uk-grid-medium uk-child-width-1-1 uk-child-width-1-4@m uk-grid" uk-grid="">
+            <div class="uk-first-column"><a class="uk-logo" href="index.html"><img style="width: 30vh;" src="icon/logo.png"
+                        width="90" height="32" alt="Logo"></a>
+                <p class="uk-text-small">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut mauris eros.
+                    Nulla quis ante sed tortor efficitur facilisis.</p>
+                <ul class="uk-iconnav">
+                    <li><a href="#" title="Facebook" uk-icon="facebook" class="uk-icon"><svg width="20" height="20"
+                                viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M11,10h2.6l0.4-3H11V5.3c0-0.9,0.2-1.5,1.5-1.5H14V1.1c-0.3,0-1-0.1-2.1-0.1C9.6,1,8,2.4,8,5v2H5.5v3H8v8h3V10z">
+                                </path>
+                            </svg></a></li>
+                    <li><a href="#" title="Twitter" uk-icon="twitter" class="uk-icon"><svg width="20" height="20"
+                                viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M19,4.74 C18.339,5.029 17.626,5.229 16.881,5.32 C17.644,4.86 18.227,4.139 18.503,3.28 C17.79,3.7 17.001,4.009 16.159,4.17 C15.485,3.45 14.526,3 13.464,3 C11.423,3 9.771,4.66 9.771,6.7 C9.771,6.99 9.804,7.269 9.868,7.539 C6.795,7.38 4.076,5.919 2.254,3.679 C1.936,4.219 1.754,4.86 1.754,5.539 C1.754,6.82 2.405,7.95 3.397,8.61 C2.79,8.589 2.22,8.429 1.723,8.149 L1.723,8.189 C1.723,9.978 2.997,11.478 4.686,11.82 C4.376,11.899 4.049,11.939 3.713,11.939 C3.475,11.939 3.245,11.919 3.018,11.88 C3.49,13.349 4.852,14.419 6.469,14.449 C5.205,15.429 3.612,16.019 1.882,16.019 C1.583,16.019 1.29,16.009 1,15.969 C2.635,17.019 4.576,17.629 6.662,17.629 C13.454,17.629 17.17,12 17.17,7.129 C17.17,6.969 17.166,6.809 17.157,6.649 C17.879,6.129 18.504,5.478 19,4.74">
+                                </path>
+                            </svg></a></li>
+                    <li><a href="#" title="YouTube" uk-icon="youtube" class="uk-icon"><svg width="20" height="20"
+                                viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M15,4.1c1,0.1,2.3,0,3,0.8c0.8,0.8,0.9,2.1,0.9,3.1C19,9.2,19,10.9,19,12c-0.1,1.1,0,2.4-0.5,3.4c-0.5,1.1-1.4,1.5-2.5,1.6 c-1.2,0.1-8.6,0.1-11,0c-1.1-0.1-2.4-0.1-3.2-1c-0.7-0.8-0.7-2-0.8-3C1,11.8,1,10.1,1,8.9c0-1.1,0-2.4,0.5-3.4C2,4.5,3,4.3,4.1,4.2 C5.3,4.1,12.6,4,15,4.1z M8,7.5v6l5.5-3L8,7.5z">
+                                </path>
+                            </svg></a></li>
+                    <li><a href="#" title="Instagram" uk-icon="instagram" class="uk-icon"><svg width="20" height="20"
+                                viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M13.55,1H6.46C3.45,1,1,3.44,1,6.44v7.12c0,3,2.45,5.44,5.46,5.44h7.08c3.02,0,5.46-2.44,5.46-5.44V6.44 C19.01,3.44,16.56,1,13.55,1z M17.5,14c0,1.93-1.57,3.5-3.5,3.5H6c-1.93,0-3.5-1.57-3.5-3.5V6c0-1.93,1.57-3.5,3.5-3.5h8 c1.93,0,3.5,1.57,3.5,3.5V14z">
+                                </path>
+                                <circle cx="14.87" cy="5.26" r="1.09"></circle>
+                                <path
+                                    d="M10.03,5.45c-2.55,0-4.63,2.06-4.63,4.6c0,2.55,2.07,4.61,4.63,4.61c2.56,0,4.63-2.061,4.63-4.61 C14.65,7.51,12.58,5.45,10.03,5.45L10.03,5.45L10.03,5.45z M10.08,13c-1.66,0-3-1.34-3-2.99c0-1.65,1.34-2.99,3-2.99s3,1.34,3,2.99 C13.08,11.66,11.74,13,10.08,13L10.08,13L10.08,13z">
+                                </path>
+                            </svg></a></li>
+                </ul>
+            </div>
+            <div class="">
+                <nav class="textclr uk-grid-small uk-child-width-1-2 uk-grid" uk-grid="">
+                    <div class="uk-first-column">
+                        <ul class="uk-nav uk-nav-default ">
+                            <li><a href="catalog.html">Catalog</a></li>
+                            <li><a href="brands.html">Brands</a></li>
+                            <li><a href="delivery.html">Delivery</a></li>
+                            <li><a href="faq.html">FAQ</a></li>
+                            <li><a href="#">Payment</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <ul class="uk-nav uk-nav-default">
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="contacts.html">Contacts</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="news.html">News</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <div class="">
+                <ul class="uk-list uk-text-small">
+                </ul>
+            </div>
+            <div class="">
+                <ul class="uk-list uk-text-small">
+                    <li><a class="uk-link-muted" href="#"><span class="uk-margin-small-right uk-icon"
+                                uk-icon="receiver"><svg width="20" height="20" viewBox="0 0 20 20"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill="none" stroke="#000" stroke-width="1.01"
+                                        d="M6.189,13.611C8.134,15.525 11.097,18.239 13.867,18.257C16.47,18.275 18.2,16.241 18.2,16.241L14.509,12.551L11.539,13.639L6.189,8.29L7.313,5.355L3.76,1.8C3.76,1.8 1.732,3.537 1.7,6.092C1.667,8.809 4.347,11.738 6.189,13.611">
+                                    </path>
+                                </svg></span><span class="tm-pseudo">8 800 555 35 35</span></a></li>
+                    <li><a class="uk-link-muted" href="#"><span class="uk-margin-small-right uk-icon"
+                                uk-icon="mail"><svg width="20" height="20" viewBox="0 0 20 20"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <polyline fill="none" stroke="#000" points="1.4,6.5 10,11 18.6,6.5"></polyline>
+                                    <path d="M 1,4 1,16 19,16 19,4 1,4 Z M 18,15 2,15 2,5 18,5 18,15 Z"></path>
+                                </svg></span><span class="tm-pseudo">example@example.com</span></a></li>
+                    <li>
+                        <div class="uk-text-muted"><span class="uk-margin-small-right uk-icon" uk-icon="location"><svg
+                                    width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill="none" stroke="#000" stroke-width="1.01"
+                                        d="M10,0.5 C6.41,0.5 3.5,3.39 3.5,6.98 C3.5,11.83 10,19 10,19 C10,19 16.5,11.83 16.5,6.98 C16.5,3.39 13.59,0.5 10,0.5 L10,0.5 Z">
+                                    </path>
+                                    <circle fill="none" stroke="#000" cx="10" cy="6.8" r="2.3"></circle>
+                                </svg></span><span>Адрес</span></div>
+                    </li>
+                    <li>
+                        <div class="uk-text-muted"><span class="uk-margin-small-right uk-icon" uk-icon="clock"><svg
+                                    width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <circle fill="none" stroke="#000" stroke-width="1.1" cx="10" cy="10" r="9"></circle>
+                                    <rect x="9" y="4" width="1" height="7"></rect>
+                                    <path fill="none" stroke="#000" stroke-width="1.1" d="M13.018,14.197 L9.445,10.625">
+                                    </path>
+                                </svg></span><span>Ежеденевно с 10:00–22:00</span>
+                            </div>
+                    </li>
+                </ul>
+            </div>
+          
+        </div>
+        <hr class="uk-grid-divider">
+        <div class="uk-list uk-link-text" class="uk-card-footer ">
+         
+            <li><a target="_blank">2021 © Все права защищены</a>
+        </div>
+    </div>
+   
+</section>
+
+    <script src="js/app.min.js"></script>
+<!--<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+<script src="js/index.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.7.1/dist/js/uikit.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.7.1/dist/js/uikit-icons.min.js"></script>-->
+
+
+    <div class="uk-inline" style="position: fixed; margin-left: 10px; top: 85%; width:347px; height:160px;   display: block; z-index:99999999; font-size: 2vh;">
+    <button class="uk-button uk-button-default" type="button">Все страницы</button>
+    <div uk-dropdown="pos: top-right">
+        <ul class="uk-nav uk-dropdown-nav">
+            <li><a href="index.html">index </a></li>
+            <li><a href="product.html">Карточка продукта </a></li>
+            <li><a href="contacts.html">Контакты </a></li>
+            <li><a href="sales.html">Акции</a></li>
+            <li><a href="sales_roll.html">Аукционные продукты (суши/роллы)</a></li>
+            <li><a href="sales_burger.html">Аукционные продукты (бургеры)</a></li>
+            <li><a href="del.html">Доставка</a></li>
+            <li><a href="news.html">Новости</a></li>
+            <li><a href="checkout.html">Оформление заказа</a></li>
+            <li><a href="privacy.html">Политика конфиденциальности</a></li>
+            <li><a href="burger.html">Бургеры</a></li>
+        </ul>
+    </div>
+</div>
+</body>
+
+</html>
